@@ -406,6 +406,57 @@ h2{
   flex-wrap:wrap;
 }
 
+/* 外層 */
+.menu-accordion{
+  max-width:520px;
+  margin:auto;
+}
+
+/* 每一項 */
+.menu-item{
+  border-bottom:1px solid rgba(255,255,255,0.15);
+  padding:14px 0;
+  cursor:pointer;
+}
+
+/* 標題 */
+.menu-title{
+  font-size:15px;
+  letter-spacing:0.08em;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+/* 加箭頭 */
+.menu-title::after{
+  content:"+";
+  font-size:16px;
+  transition:0.3s;
+}
+
+/* 展開後變 - */
+.menu-item.active .menu-title::after{
+  content:"−";
+}
+
+/* 內容（預設收起） */
+.menu-desc{
+  max-height:0;
+  overflow:hidden;
+  opacity:0;
+  transition:all 0.4s ease;
+  font-size:14px;
+  line-height:1.8;
+  margin-top:0;
+}
+
+/* 展開狀態 */
+.menu-item.active .menu-desc{
+  max-height:200px;
+  opacity:1;
+  margin-top:10px;
+}
 
 </style>
 </head>
@@ -525,20 +576,41 @@ Lantern streets, tea houses, and mountain views.
 <img src="https://cdn-icons-png.flaticon.com/512/685/685655.png" width="20">
 必吃推薦
 </h3>
+<div class="menu-accordion">
 
-<p>
-【木瓜牛奶雪花冰】<br>
-濃郁果香 × 滑順奶感，溫潤順口<br><br>
+  <div class="menu-item active">
+    <div class="menu-title">🍈 【木瓜牛奶雪花冰】</div>
+    <div class="menu-desc">
+      新鮮木瓜現打製成雪花冰，<br>
+      香甜滑順，帶出自然果香。
+    </div>
+  </div>
 
-【西瓜雪花冰】<br>
-清爽解膩 × 夏日首選，自然甜度<br><br>
+  <div class="menu-item ">
+    <div class="menu-title">🍉 【西瓜雪花冰】</div>
+    <div class="menu-desc">
+      清爽不膩，西瓜本身的甜度與水分，<br>
+      夏天吃一口直接降溫。
+    </div>
+  </div>
 
-【芒果戀雪雪花冰】<br>
-新鮮芒果 × 綿密果肉，香氣飽滿<br><br>
+  <div class="menu-item active">
+    <div class="menu-title">🥭 【芒果戀雪雪花冰】</div>
+    <div class="menu-desc">
+      新鮮芒果雪花冰搭配果肉與奶酪，<br>
+      綿密細緻，果香濃郁。
+    </div>
+  </div>
 
-【宇治抹茶雪花冰】<br>
-茶香回甘 × 大人風味，細緻層次
-</p>
+  <div class="menu-item ">
+    <div class="menu-title">🍵 【宇治抹茶雪花冰】</div>
+    <div class="menu-desc">
+      濃厚抹茶搭配紅豆與煉乳，<br>
+      微苦回甘，層次豐富。
+    </div>
+  </div>
+
+</div>
 
 <!-- 🔥 評論 -->
 <div class="review">
@@ -888,6 +960,25 @@ function loop(){
 }
 
 window.addEventListener("DOMContentLoaded", loop);
+</script>
+
+<script>
+document.querySelectorAll(".menu-item").forEach(item => {
+  item.addEventListener("click", () => {
+
+    const isActive = item.classList.contains("active");
+
+    // 🔥 Apple感：一次只開一個
+    document.querySelectorAll(".menu-item").forEach(i => {
+      i.classList.remove("active");
+    });
+
+    if(!isActive){
+      item.classList.add("active");
+    }
+
+  });
+});
 </script>
 
 </body>
