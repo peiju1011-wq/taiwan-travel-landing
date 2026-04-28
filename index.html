@@ -266,69 +266,63 @@ h2{
   position:relative;
 
   min-height:50vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+
+  overflow-x:auto;                      /* 🔥 可以滑 */
+  -webkit-overflow-scrolling:touch;
 
   margin-bottom:3px;
-  padding:80px 20px;
+  padding:0;                            /* 🔥 關鍵：不要內距 */
 
-  color:#fff;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
-
-  background:
-    linear-gradient(to bottom, 
-      rgba(0, 0, 0, 0.316) 0%, 
-      rgba(0, 0, 0, 0.545) 60%, 
-      #00000099 100%
-    ),
-    url('./images/f1.png') center 40% / cover no-repeat; /* 🔥 改這裡 */
+  background:none;                      /* 🔥 關鍵：移除背景圖 */
 }
 
+.final-scroll{
+  position:relative;
+  min-width:1100px;   /* 🔥 控制可滑寬度（可調 900~1200） */
+}
 
-/* 🔥 控制內容寬度（質感關鍵） */
-.final-inner{
-  max-width:720px;
+.final-img{
   width:100%;
-   text-shadow:
-    0 2px 6px rgba(0,0,0,0.7),
-    0 8px 18px rgba(0,0,0,0.3);
+  display:block;
 }
 
 
-/* 標題 */
-.final-title{
-  font-size:28px;
-  margin-bottom:20px;
-  letter-spacing:0.05em;
-   text-shadow:
-    0 2px 6px rgba(0,0,0,0.7),
-    0 8px 18px rgba(0,0,0,0.3);
+
+
+.final-inner{
+  position:absolute;
+  top:50%;
+  left:40px;
+  transform:translateY(-50%);
+
+  max-width:380px;
+  color:#fff;
+
+  /* 🔥 新增這段 */
+  background:linear-gradient(
+    to right,
+    rgba(0,0,0,0.45),
+    rgba(0,0,0,0.25),
+    transparent
+  );
+
+  padding:16px 18px;
+  border-radius:10px;
+
+  text-shadow:
+    0 2px 6px rgba(0,0,0,0.8),
+    0 10px 22px rgba(0,0,0,0.45);
 }
 
 
-/* 內文 */
-.final-text{
-  line-height:1.8;
-  opacity:0.95;
-   text-shadow:
-    0 2px 6px rgba(0,0,0,0.7),
-    0 8px 18px rgba(0,0,0,0.3);
+.final-section::-webkit-scrollbar{
+  display:none;
 }
 
-
-/* 英文 */
-.final-en{
-  margin-top:20px;
-  font-size:14px;
-  opacity:0.75;
-  letter-spacing:0.08em;
-   text-shadow:
-    0 2px 6px rgba(0,0,0,0.7),
-    0 8px 18px rgba(0,0,0,0.3);
+.final-section{
+  -ms-overflow-style:none;
+  scrollbar-width:none;
 }
-
-
 /* 按鈕區 */
 .final-cta{
   margin-top:30px;
@@ -340,18 +334,16 @@ h2{
 @media (max-width:768px){
 
   .final-section{
-    padding:60px 20px;
-    background:
-      linear-gradient(to bottom, 
-        rgba(0,0,0,0.2) 0%, 
-        rgba(0,0,0,0.35) 60%, 
-        #000000f0 100%
-      ),
-      url('./images/f1.png') center 30% / cover no-repeat; /* 🔥 手機往上抓 */
+    padding:0;   /* 🔥 不要內距 */
   }
 
-  .final-title{
-    font-size:22px;
+  .final-scroll{
+    min-width:900px;   /* 🔥 手機滑動寬度 */
+  }
+
+  .final-inner{
+    left:24px;
+    max-width:300px;
   }
 
 }
@@ -591,6 +583,42 @@ h2{
   .menu-gallery img{
     width:90%;
   }
+
+
+
+.final-scroll{
+  position:relative;
+  min-width:900px;                    /* 🔥 比手機寬 */
+}
+
+.final-img{
+  width:100%;
+  display:block;
+}
+
+/* 🔥 文字蓋在圖上 */
+.final-inner{
+  position:absolute;
+  top:50%;
+  left:40px;
+  transform:translateY(-50%);
+
+  max-width:380px;   /* 🔥 建議用這個（不壓到右邊留言） */
+
+  color:#fff;
+
+  text-shadow:
+    0 2px 6px rgba(0,0,0,0.7),
+    0 8px 18px rgba(0,0,0,0.3);
+}
+@media (max-width:768px){
+
+  .final-inner{
+    left:24px;        /* 🔥 往內一點，避免貼邊 */
+    max-width:300px;  /* 🔥 手機再縮，避免壓畫面 */
+  }
+
+}
 
 }
 
@@ -916,41 +944,49 @@ A mix of tradition, culture, and local souvenirs.
 <!-- 🔥 收藏＆行動收尾 -->
 <section class="final-section">
 
-<div class="final-inner">
+  <div class="final-scroll">
 
-  <h2 class="final-title">📌 收藏這條路線</h2>
+    <!-- 🔥 背景圖（整張可滑） -->
+    <img src="./images/f1.png" class="final-img">
 
-  <p class="final-text">
-    這不是一條普通行程，<br>
-    是把「風景、氛圍、與一碗冰」串在一起的旅程。<br><br>
+    <!-- 🔥 文字內容 -->
+    <div class="final-inner">
 
-    從台北城市 → 北海岸 → 九份 → 最後停在新莊<br>
-    很多人走完後，都會記住第4天。
-  </p>
+      <h2 class="final-title">📌 收藏這條路線</h2>
 
-  <p class="final-en">
-    Save this route for your next Taiwan trip.
-  </p>
+      <p class="final-text">
+        這不是一條普通行程，<br>
+        是把「風景、氛圍、與一碗冰」串在一起的旅程。<br><br>
 
-<div class="final-cta">
+        從台北城市 → 北海岸 → 九份 → 最後停在新莊<br>
+        很多人走完後，都會記住第4天。
+      </p>
 
-  <a class="cta" 
-     href="https://maps.google.com/?q=新莊化成路 夏雪覓境"
-     target="_blank"
-     rel="noopener noreferrer">
-    📍 直接導航去吃
-  </a>
+      <p class="final-en">
+        Save this route for your next Taiwan trip.
+      </p>
 
-  <a class="cta secondary" 
-     href="https://www.facebook.com/cosysnowofficial/photos"
-     target="_blank"
-     rel="noopener noreferrer">
-    📸 看更多實拍
-  </a>
+      <div class="final-cta">
 
-</div>
+        <a class="cta" 
+           href="https://maps.google.com/?q=新莊化成路 夏雪覓境"
+           target="_blank"
+           rel="noopener noreferrer">
+          📍 直接導航去吃
+        </a>
 
-</div>
+        <a class="cta secondary" 
+           href="https://www.facebook.com/cosysnowofficial/photos"
+           target="_blank"
+           rel="noopener noreferrer">
+          📸 看更多實拍
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
 
 </section>
 
