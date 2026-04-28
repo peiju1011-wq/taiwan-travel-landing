@@ -95,6 +95,18 @@ h2{
    transform:translateY(-2px);
 }
 
+/* 上面那組（淺背景）專用 */
+.cta-wrap .cta.secondary{
+  background:#ffffff;                     /* 🔥 改白底 */
+  border:1px solid rgba(0,0,0,0.08);
+  color:#333;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+
+.cta-wrap .cta.secondary:hover{
+  background:#fff3f6;
+  transform:translateY(-2px);
+}
 
 
 
@@ -385,7 +397,13 @@ h2{
   transform:translateY(1px); /* 微調對齊 */
 }
 
-
+.cta-wrap{
+  display:flex;
+  justify-content:center;   /* 🔥 水平置中 */
+  gap:12px;                 /* 按鈕間距 */
+  margin-top:30px;
+  flex-wrap:wrap;           /* 手機不擠 */
+}
 
 
 </style>
@@ -587,20 +605,23 @@ Lantern streets, tea houses, and mountain views.
 <script async src="//www.instagram.com/embed.js"></script>
 
 <!-- 🔥 CTA -->
-<a class="cta" 
-   href="https://maps.google.com/?q=新莊化成路 夏雪覓境"
-   target="_blank"
-   rel="noopener noreferrer">
-  📍 立即導航（現在出發）
-</a>
+<div class="cta-wrap">
 
-<a class="cta" 
-   href="https://www.facebook.com/cosysnowofficial/photos" 
-   target="_blank"
-   rel="noopener noreferrer"
-   style="margin-left:10px;">
-  📸 查看更多照片
-</a>
+  <a class="cta" 
+     href="https://maps.google.com/?q=新莊化成路 夏雪覓境"
+     target="_blank"
+     rel="noopener noreferrer">
+    📍 立即導航（現在出發）
+  </a>
+
+  <a class="cta secondary" 
+     href="https://www.facebook.com/cosysnowofficial/photos" 
+     target="_blank"
+     rel="noopener noreferrer">
+    📸 查看更多照片
+  </a>
+
+</div>
 
 <!-- 🔥 地圖（iframe 本來就不會跳頁，不用改） -->
 <iframe
@@ -742,6 +763,8 @@ font-size:13px;
 <p style="margin-top:10px;">
 📍 新北市新莊區化成路186號
 </p>
+
+
 
 <p style="margin-top:10px;">
 © 2026 All Rights Reserved
