@@ -127,6 +127,21 @@ h2{
    transform:translateY(-2px);
 }
 
+@media (max-width:768px){
+
+  .cta-wrap{
+    flex-direction:column;   /* 🔥 關鍵 */
+    align-items:center;
+    gap:10px;
+  }
+
+  .cta{
+    width:50%;               /* 🔥 讓按鈕變長條 */
+    text-align:center;
+  }
+
+}
+
 /* 上面那組（淺背景）專用 */
 .cta-wrap .cta.secondary{
   background:#ffffff;                     /* 🔥 改白底 */
@@ -649,7 +664,7 @@ Lantern streets, tea houses, and mountain views.
     </div>
   </div>
 
-  <div class="menu-item ">
+  <div class="menu-item active ">
     <div class="menu-title">🍉 【西瓜雪花冰】</div>
     <div class="menu-desc">
       清爽不膩，西瓜本身的甜度與水分，<br>
@@ -665,7 +680,7 @@ Lantern streets, tea houses, and mountain views.
     </div>
   </div>
 
-  <div class="menu-item ">
+  <div class="menu-item active ">
     <div class="menu-title">🍵 【宇治抹茶雪花冰】</div>
     <div class="menu-desc">
       濃厚抹茶搭配紅豆與煉乳，<br>
