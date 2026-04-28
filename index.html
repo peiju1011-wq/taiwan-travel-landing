@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>台灣5天4夜終極路線｜北海岸＋九份＋新莊雪花冰推薦</title>
+<meta name="description" content="台灣旅遊推薦！北海岸、九份與新莊雪花冰名店夏雪覓境，一次玩遍經典美景與在地美食。" />
+<meta name="keywords" content="台灣旅遊, 北海岸, 九份, 新莊美食, 雪花冰推薦, 夏雪覓境">
+
+<!-- OG -->
+<meta property="og:title" content="台灣5天4夜終極路線！內行人這樣玩" />
+<meta property="og:description" content="北海岸＋九份＋新莊隱藏雪花冰，這條路線直接收藏！" />
+<meta property="og:image" content="https://images.unsplash.com/photo-1504674900247-0877df9cc836" />
+<meta property="og:type" content="website" />
+
+<style>
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont;
+  color:#111;
+  background:#FFF5F7;
+}
+section{
+  max-width:1000px;
+  margin:auto;
+  padding:60px 20px;
+}
+
+
+/* 主標：保留浮起感，但收斂一點 */
+.hero h1{
+  font-size:36px;
+  letter-spacing:0.1em;
+  text-shadow:
+    0 2px 6px rgba(0,0,0,0.75),
+    0 8px 18px rgba(0,0,0,0.25);
+}
+
+/* 副標＋內文：改更清晰（重點🔥） */
+.hero .en{
+  opacity:0.85;
+  letter-spacing:0.08em;
+   text-shadow:
+    0 1px 3px rgba(0,0,0,0.45);
+}
+.hero p{
+  text-shadow:
+    0 1px 3px rgba(0,0,0,0.45);
+}
+
+
+.hero{
+  height:90vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.38)),
+    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+  
+}
+
+.en{
+  font-size:14px;
+  opacity:0.8;
+}
+h2{
+  margin-bottom:10px;
+}
+.day{
+  border-bottom:1px solid #eee;
+}
+
+.cta{
+  
+  font-size:13px;
+  display:inline-block;
+  margin-top:20px;
+  padding:10px 16px;
+ background:#f08fa7;
+  color:white;
+  text-decoration:none;
+  border-radius:6px;
+  box-shadow:0 10px 25px rgba(240,143,167,0.35);
+  transition:0.3s
+}
+
+.cta:hover{
+  background:#f46388;
+
+   transform:translateY(-2px);
+}
+
+
+
+
+/* 正餐區（你之後加） */
+.food-section{
+  background:
+    linear-gradient(rgba(255, 79, 122, 0.15), rgba(0,0,0,0.65)),
+    url('/images/f3.png') center 65%/cover no-repeat;
+}
+
+.food-section h2{
+  font-weight:600;
+  letter-spacing:0.1em;
+
+  text-shadow:
+    0 1px 2px rgba(255,255,255,0.85),
+    0 7px 15px rgba(255, 255, 255, 0.66);
+}
+
+.food-section p{
+  margin-top:20px;
+  line-height:2;
+  color:rgba(255,255,255,0.9);
+    text-shadow:
+    0 2px 4px rgba(0,0,0,0.85),
+    0 6px 12px rgba(0,0,0,0.35);
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-top:20px;
+}
+.gallery img{
+  width:100%;
+  border-radius:10px;
+}
+.review{
+  margin-top:20px;
+  font-size:14px;
+  line-height:1.8;
+}
+
+
+.menu-gallery{
+  display:flex;
+  gap:40px;
+  justify-content:center;
+  margin-top:40px;
+}
+
+.menu-gallery img{
+  width:260px;
+  border-radius:12px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.menu-gallery img:hover{
+  transform:scale(1.05);
+  cursor:pointer;
+}
+
+/* 🔥 燈箱 */
+.lightbox{
+  display:none;
+  position:fixed;
+  z-index:999;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.9);
+  align-items:center;
+  justify-content:center;
+}
+
+.lightbox img{
+  max-width:90%;
+  max-height:80%;
+  border-radius:10px;
+}
+
+.close{
+  position:absolute;
+  top:20px;
+  right:30px;
+  font-size:40px;
+  color:white;
+  cursor:pointer;
+}
+
+/* 左右鍵 */
+.nav{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:50px;
+  color:white;
+  cursor:pointer;
+  padding:10px;
+}
+
+.prev{ left:20px; }
+.next{ right:20px; }
+
+
+.final-section{
+  position:relative;
+
+  min-height:50vh;   /* 🔥 關鍵：給高度 */
+  display:flex;
+  align-items:center;
+ margin-bottom:3px;
+  padding:80px 20px;
+
+  color:#fff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  background:
+    linear-gradient(to bottom, 
+      rgba(0,0,0,0.15) 0%, 
+      rgba(0, 0, 0, 0.239) 60%, 
+      #000000ed 100%
+    ),
+   url('/images/f1.png') center 50%/cover no-repeat;
+}
+
+/* 🔥 動畫 */
+@keyframes fadeIn{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+
+
+/* 🔥 內容改成貼圖左側 */
+.final-inner{
+  max-width:420px;
+  margin-left:6%;
+
+  text-align:left;
+
+  /* 🔥 關鍵改這三個 */
+  background:rgba(0,0,0,0.12);      /* 更透明 */
+  backdrop-filter: blur(3px);       /* 再淡一點 */
+  border:1px solid rgba(255,255,255,0.15);  /* 🔥 加這個 */
+
+  padding:20px 22px;
+  border-radius:12px;
+
+  box-shadow:0 20px 50px rgba(0,0,0,0.25);
+}
+
+/* 🔥 標題 */
+.final-title{
+  font-size:26px;   /* 原本30 */
+  letter-spacing:0.15em;
+}
+/* 🔥 文字 */
+.final-text{
+  font-size:14px;
+  line-height:1.8;
+}
+
+
+/* 🔥 英文 */
+.final-en{
+  margin-top:10px;
+  opacity:0.7;
+  font-size:13px;
+}
+
+/* 🔥 按鈕改左對齊（重點） */
+.final-cta{
+  margin-top:28px;
+  display:flex;
+  gap:12px;
+  justify-content:flex-start;   /* 🔥 原本center → 改這個 */
+  flex-wrap:wrap;
+}
+
+
+
+/* 第二顆變玻璃感 */
+.cta.secondary{
+
+    background:rgba(255,255,255,0.12);
+  backdrop-filter: blur(6px);
+  border:1px solid rgba(255,255,255,0.25);
+  color:#fff;
+}
+
+.lead{
+  font-size:15px;
+  font-weight:500;
+  margin-top:20px;
+
+  text-shadow:
+    0 2px 4px rgba(0,0,0,0.85),
+    0 6px 12px rgba(0,0,0,0.35);
+}
+
+.desk{
+  font-size:15px;
+  font-weight:500;
+  margin-top:20px;
+   text-shadow: 0 2px 7px rgba(0,0,0,0.5);
+}
+
+.highlight{
+  font-size:17px;
+  font-weight:600;
+  margin-top:20px;
+  background:#ffffff;
+}
+
+.highlight-section{
+  background:#ffffff;
+}
+
+.highlight-text{
+  font-size:17px;
+  font-weight:600;
+}
+
+.cta.secondary:hover{
+  background:rgba(255,255,255,0.25);
+  transform:translateY(-2px);
+}
+
+.sub{
+  opacity:0.85;
+  margin-top:10px;
+}
+
+.menu-gallery{
+  margin-top:40px;
+}
+
+#typing-text{
+  white-space: pre-line;
+}
+
+.typing-bar{
+  max-width:520px;
+  margin:30px auto;
+  padding:16px 24px;
+  border-radius:999px;
+
+  background:rgba(255,255,255,0.92);
+  backdrop-filter: blur(8px);
+
+  font-size:15px;
+  font-weight:500;
+  letter-spacing:0.08em;
+
+  box-shadow:0 12px 30px rgba(0,0,0,0.2);
+
+   background:rgba(255,255,255,0.95);
+}
+/* 打字游標 */
+#typing-text::after{
+  content:"|";
+  margin-left:5px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink{
+  0%,100%{opacity:1;}
+  50%{opacity:0;}
+}
+
+.title{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.icon{
+  font-size:20px;   /* 🔥 控大小 */
+  transform:translateY(1px); /* 微調對齊 */
+}
+
+
+
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <h1>台灣5天4夜這樣玩</h1>
+    <div class="en">5 DAYS IN TAIWAN TRAVEL GUIDE</div>
+    <p>北海岸 × 九份 × 在地人推薦隱藏美食</p>
+  </div>
+</div>
+
+<section class="day">
+
+<h2>DAY 1｜台北城市經典</h2>
+
+<p>
+第一天先從台北最經典的地標開始。<br><br>
+
+【台北101】登高看整個城市輪廓，白天夜晚各有氛圍。<br>
+【自由廣場】感受台灣指標性建築與空間尺度。<br>
+【西門町】晚上一定要來，街頭文化、潮流、珍奶全在這裡。
+</p>
+
+<p class="en">
+Start your journey in Taipei with iconic landmarks.
+Taipei 101, Liberty Square, and Ximending nightlife.
+</p>
+
+<p class="review">
+💬 旅客心得：<br>
+「西門町晚上真的很熱鬧」<br>
+「101夜景很值得上去一次」
+</p>
+
+</section>
+
+<section class="day">
+
+<h2>DAY 2｜北海岸絕美海景路線</h2>
+
+<p>
+第二天直接衝北海岸，一路都是風景。<br><br>
+
+【野柳女王頭】世界級地質奇景，來台必看。<br>
+【金山老街】中午吃鴨肉＋在地小吃。<br>
+【淡水漁人碼頭】傍晚看夕陽，氣氛直接拉滿。
+</p>
+
+<p class="en">
+Explore Taiwan’s north coast.
+Yehliu, Jinshan Old Street, and Tamsui sunset.
+</p>
+
+<p class="review">
+💬 旅客心得：<br>
+「淡水夕陽真的超美」<br>
+「金山鴨肉很有台灣味」
+</p>
+
+</section>
+
+
+<section class="day">
+
+<h2>DAY 3｜九份山城浪漫</h2>
+
+<p>
+第三天節奏放慢，上山到九份。<br><br>
+
+燈籠階梯、茶樓、海景，隨便拍都像電影。<br>
+芋圓、茶點邊走邊吃，是最放鬆的一天。
+</p>
+
+<p class="en">
+A slow day in Jiufen.
+Lantern streets, tea houses, and mountain views.
+</p>
+
+<p class="review">
+💬 旅客心得：<br>
+「九份晚上真的很像電影場景」<br>
+「芋圓很好吃，邊走邊吃很舒服」
+</p>
+
+</section>
+
+<!-- 🔥 重點區 -->
+<section class="highlight-section">
+
+
+
+<h2>🔥 DAY 4｜旅程靈魂（必停）</h2>
+
+<h3 style="display:flex;align-items:center;gap:10px;">
+<img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" width="22">
+夏雪覓境｜新莊雪花冰推薦
+</h3>
+
+<p>
+如果這趟旅程有一個「一定會記住的地方」，就是這裡。<br><br>
+
+位於新莊化成路，這間雪花冰店在在地人口中評價非常高。<br><br>
+
+✔ Google高評價（4.8⭐）<br>
+✔ 有停車場（對開車族超重要）<br>
+✔ 空間寬敞舒適<br><br>
+
+很多人不是特地來，而是「來過一次就會再回來」。
+</p>
+
+<!-- 🔥 商品 -->
+<h3 style="display:flex;align-items:center;gap:10px;">
+<img src="https://cdn-icons-png.flaticon.com/512/685/685655.png" width="20">
+必吃推薦
+</h3>
+
+<p>
+【木瓜牛奶雪花冰】<br>
+新鮮木瓜現打製成雪花冰，香甜滑順，帶出自然果香。<br><br>
+
+【西瓜雪花冰】<br>
+清爽不膩，西瓜本身的甜度與水分，夏天吃一口直接降溫。<br><br>
+
+【香蕉牛奶雪花冰】<br>
+濃郁香蕉香氣搭配牛奶基底，口感綿密，甜而不膩。<br><br>
+
+【宇治抹茶雪花冰】<br>
+濃厚抹茶風味，搭配紅豆與煉乳，微苦回甘的大人系甜點。
+</p>
+
+<!-- 🔥 評論 -->
+<div class="review">
+💬 網友怎麼說：<br>
+「份量很大，兩個人吃剛剛好」<br>
+「比觀光區冰店更值得來」<br>
+「環境舒服會想再訪」
+</div>
+
+<h3 style="display:flex;align-items:center;gap:10px;">
+  <img src="https://cdn-icons-png.flaticon.com/512/747/747376.png" width="20">
+  現場實拍
+</h3>
+
+<p style="font-size:14px;opacity:0.8;">
+這間店在 Facebook 上有不少實拍影片，
+很多人都是看到影片後特地來吃。
+</p>
+
+<div style="text-align:center; margin-top:20px;">
+
+  <a href="https://www.facebook.com/reel/1741946666763366/" target="_blank" style="text-decoration:none;">
+
+    <div style="
+      width:320px;
+      margin:auto;
+      border-radius:16px;
+      overflow:hidden;
+      box-shadow:0 12px 30px rgba(0,0,0,0.18);
+      position:relative;
+      cursor:pointer;
+    ">
+
+      <!-- 🔥 封面（你可以換成店內實拍） -->
+      <img src="/images/v1.jpg" style="width:100%; display:block;">
+
+      <!-- 播放按鈕 -->
+      <div style="
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        background:rgba(0,0,0,0.65);
+        width:64px;
+        height:64px;
+        border-radius:50%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        color:white;
+        font-size:22px;
+      ">
+        ▶
+      </div>
+
+    </div>
+
+  </a>
+
+</div>
+
+</section>
+
+
+<script async src="//www.instagram.com/embed.js"></script>
+
+<!-- 🔥 CTA -->
+<a class="cta" 
+   href="https://maps.google.com/?q=新莊化成路 夏雪覓境"
+   target="_blank"
+   rel="noopener noreferrer">
+  📍 立即導航（現在出發）
+</a>
+
+<a class="cta" 
+   href="https://www.facebook.com/cosysnowofficial/photos" 
+   target="_blank"
+   rel="noopener noreferrer"
+   style="margin-left:10px;">
+  📸 查看更多照片
+</a>
+
+<!-- 🔥 地圖（iframe 本來就不會跳頁，不用改） -->
+<iframe
+  src="https://maps.google.com/maps?q=新莊化成路&t=&z=15&ie=UTF8&iwloc=&output=embed"
+  width="100%"
+  height="250"
+  style="border:0;margin-top:20px;">
+</iframe>
+<section class="food-section">
+
+<h2 class="title">
+  <span class="icon">🍉</span>
+  真正的水果雪花冰
+</h2>
+
+
+
+<p class="desc">
+  這裡的雪花冰，不只是甜。<br>
+選用新鮮水果現打成果汁，<br>
+直接製成冰磚，再細緻刨出。
+</p>
+
+<!-- 🔥 核心亮點（主角） -->
+<div class="typing-bar">
+  <span id="typing-text"></span>
+</div>
+
+<p class="desc">
+每一口，都是水果本身的香氣，<br>
+與自然的甜度，剛剛好的好滋味，<br>
+沒有多餘添加，只有單純好吃。
+</p>
+
+<!-- 🔥 圖片 -->
+ 
+<div class="menu-gallery">
+  <img src="/images/menu1.jpg" onclick="openLightbox(0)">
+  <img src="/images/menu2.jpg" onclick="openLightbox(1)">
+</div>
+
+</section>
+
+<!-- 🔥 燈箱 -->
+<div id="lightbox" class="lightbox">
+
+  <span class="close" onclick="closeLightbox()">×</span>
+
+  <img id="lightbox-img">
+
+  <div class="nav prev" onclick="changeSlide(-1)">‹</div>
+  <div class="nav next" onclick="changeSlide(1)">›</div>
+
+</div>
+
+<section class="day">
+
+<h2>DAY 5｜大稻埕與旅程收尾</h2>
+
+<p>
+最後一天留給台北最有味道的老街。<br><br>
+
+【大稻埕迪化街】文創＋老店混合的氛圍。<br>
+可以買鳳梨酥、茶葉、伴手禮。<br><br>
+
+慢慢走、慢慢逛，讓這趟旅程收得剛剛好。
+</p>
+
+<p class="en">
+End your trip at Dihua Street.
+A mix of tradition, culture, and local souvenirs.
+</p>
+
+<p class="review">
+💬 旅客心得：<br>
+「這裡很適合最後一天慢慢逛」<br>
+「很好買伴手禮」
+</p>
+
+</section>
+
+<!-- 🔥 收藏＆行動收尾 -->
+<section class="final-section">
+
+<div class="final-inner">
+
+  <h2 class="final-title">📌 收藏這條路線</h2>
+
+  <p class="final-text">
+    這不是一條普通行程，<br>
+    是把「風景、氛圍、與一碗冰」串在一起的旅程。<br><br>
+
+    從台北城市 → 北海岸 → 九份 → 最後停在新莊<br>
+    很多人走完後，都會記住第4天。
+  </p>
+
+  <p class="final-en">
+    Save this route for your next Taiwan trip.
+  </p>
+
+<div class="final-cta">
+
+  <a class="cta" 
+     href="https://maps.google.com/?q=新莊化成路 夏雪覓境"
+     target="_blank"
+     rel="noopener noreferrer">
+    📍 直接導航去吃
+  </a>
+
+  <a class="cta secondary" 
+     href="https://www.facebook.com/cosysnowofficial/photos"
+     target="_blank"
+     rel="noopener noreferrer">
+    📸 看更多實拍
+  </a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- 🔥 Footer -->
+<footer style="
+background:#000;
+color:#aaa;
+text-align:center;
+padding:40px 20px;
+font-size:13px;
+">
+
+<p style="letter-spacing:0.2em;">SUMMER SNOW</p>
+
+<p style="margin-top:10px;">
+夏雪覓境｜新莊雪花冰
+</p>
+
+<p style="margin-top:10px;">
+📍 新北市新莊區化成路186號
+</p>
+
+<p style="margin-top:10px;">
+© 2026 All Rights Reserved
+</p>
+
+</footer>
+
+
+<script>
+const images = [
+  "/images/menu1.jpg",
+  "/images/menu2.jpg"
+];
+
+let currentIndex = 0;
+
+function openLightbox(index){
+  currentIndex = index;
+  document.getElementById("lightbox").style.display = "flex";
+  document.getElementById("lightbox-img").src = images[currentIndex];
+}
+
+function closeLightbox(){
+  document.getElementById("lightbox").style.display = "none";
+}
+
+function changeSlide(direction){
+  currentIndex += direction;
+
+  if(currentIndex < 0) currentIndex = images.length - 1;
+  if(currentIndex >= images.length) currentIndex = 0;
+
+  document.getElementById("lightbox-img").src = images[currentIndex];
+}
+</script>
+
+<script>
+document.getElementById("lightbox").addEventListener("click", function(e){
+  if(e.target === this){
+    closeLightbox();
+  }
+});
+</script>
+
+<script>
+let startX = 0;
+
+document.getElementById("lightbox").addEventListener("touchstart", e => {
+  startX = e.touches[0].clientX;
+});
+
+document.getElementById("lightbox").addEventListener("touchend", e => {
+  let endX = e.changedTouches[0].clientX;
+
+  if(startX - endX > 50){
+    changeSlide(1);
+  }else if(endX - startX > 50){
+    changeSlide(-1);
+  }
+});
+</script>
+
+<script>
+const texts = [
+  ["新鮮水果現打，不是糖水冰", "每一口都是果香"]
+];
+
+let i = 0;
+let j = 0;
+let line = 0;
+let isDeleting = false;
+
+function loop(){
+  const currentLines = texts[i];
+  const currentText = currentLines[line];
+
+  // 🔥 先更新畫面（關鍵）
+  document.getElementById("typing-text").innerHTML =
+    currentLines
+      .map((l, idx) => {
+        if(idx < line) return l;
+        if(idx === line) return l.slice(0, j);
+        return "";
+      })
+      .join("<br>");
+
+  // 🔥 再改 j（順序調整）
+  if(!isDeleting){
+    j++;
+  }else{
+    j--;
+  }
+
+  // ✅ 一行打完（含最後一個字）
+  if(!isDeleting && j > currentText.length){
+    if(line < currentLines.length - 1){
+      line++;
+      j = 0;
+    }else{
+      isDeleting = true;
+      setTimeout(loop, 2000);
+      return;
+    }
+  }
+
+  // ✅ 刪完
+  if(isDeleting && j < 0){
+    if(line > 0){
+      line--;
+      j = currentLines[line].length;
+    }else{
+      isDeleting = false;
+      i = (i + 1) % texts.length;
+    }
+  }
+
+  const speed = isDeleting ? 40 : 70;
+  setTimeout(loop, speed);
+}
+
+window.addEventListener("DOMContentLoaded", loop);
+</script>
+
+</body>
+</html>
