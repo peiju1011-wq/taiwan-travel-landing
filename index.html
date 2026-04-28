@@ -18,7 +18,7 @@
 <meta property="og:description" content="北海岸＋九份＋新莊隱藏雪花冰，這條路線直接收藏！" />
 <meta property="og:url" content="https://peiju1011-wq.github.io/taiwan-travel-landing/" />
 
-<meta property="og:image" content="https://peiju1011-wq.github.io/taiwan-travel-landing/images/og.png?v=1" />
+<meta property="og:image" content="https://peiju1011-wq.github.io/taiwan-travel-landing/images/og2.png?v=2" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -28,7 +28,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="台灣5天4夜終極路線！內行人這樣玩" />
 <meta name="twitter:description" content="北海岸＋九份＋新莊隱藏雪花冰，這條路線直接收藏！" />
-<meta name="twitter:image" content="https://peiju1011-wq.github.io/taiwan-travel-landing/images/og.png?v=1" />
+<meta name="twitter:image" content="https://peiju1011-wq.github.io/taiwan-travel-landing/images/og2.png?v=2" />
 <style>
 
 html, body {
@@ -265,21 +265,95 @@ h2{
 .final-section{
   position:relative;
 
-  min-height:50vh;   /* 🔥 關鍵：給高度 */
+  min-height:50vh;
   display:flex;
   align-items:center;
- margin-bottom:3px;
+  justify-content:center;
+
+  margin-bottom:3px;
   padding:80px 20px;
 
   color:#fff;
   text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+
   background:
     linear-gradient(to bottom, 
-      rgba(0,0,0,0.15) 0%, 
-      rgba(0, 0, 0, 0.239) 60%, 
-      #000000ed 100%
+      rgba(0, 0, 0, 0.316) 0%, 
+      rgba(0, 0, 0, 0.545) 60%, 
+      #00000099 100%
     ),
-   url('./images/f1.png') center 50%/cover no-repeat;
+    url('./images/f1.png') center 40% / cover no-repeat; /* 🔥 改這裡 */
+}
+
+
+/* 🔥 控制內容寬度（質感關鍵） */
+.final-inner{
+  max-width:720px;
+  width:100%;
+   text-shadow:
+    0 2px 6px rgba(0,0,0,0.7),
+    0 8px 18px rgba(0,0,0,0.3);
+}
+
+
+/* 標題 */
+.final-title{
+  font-size:28px;
+  margin-bottom:20px;
+  letter-spacing:0.05em;
+   text-shadow:
+    0 2px 6px rgba(0,0,0,0.7),
+    0 8px 18px rgba(0,0,0,0.3);
+}
+
+
+/* 內文 */
+.final-text{
+  line-height:1.8;
+  opacity:0.95;
+   text-shadow:
+    0 2px 6px rgba(0,0,0,0.7),
+    0 8px 18px rgba(0,0,0,0.3);
+}
+
+
+/* 英文 */
+.final-en{
+  margin-top:20px;
+  font-size:14px;
+  opacity:0.75;
+  letter-spacing:0.08em;
+   text-shadow:
+    0 2px 6px rgba(0,0,0,0.7),
+    0 8px 18px rgba(0,0,0,0.3);
+}
+
+
+/* 按鈕區 */
+.final-cta{
+  margin-top:30px;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+@media (max-width:768px){
+
+  .final-section{
+    padding:60px 20px;
+    background:
+      linear-gradient(to bottom, 
+        rgba(0,0,0,0.2) 0%, 
+        rgba(0,0,0,0.35) 60%, 
+        #000000f0 100%
+      ),
+      url('./images/f1.png') center 30% / cover no-repeat; /* 🔥 手機往上抓 */
+  }
+
+  .final-title{
+    font-size:22px;
+  }
+
 }
 
 /* 🔥 動畫 */
@@ -296,23 +370,7 @@ h2{
 
 
 
-/* 🔥 內容改成貼圖左側 */
-.final-inner{
-  max-width:420px;
-  margin-left:6%;
 
-  text-align:left;
-
-  /* 🔥 關鍵改這三個 */
-  background:rgba(0,0,0,0.12);      /* 更透明 */
-  backdrop-filter: blur(3px);       /* 再淡一點 */
-  border:1px solid rgba(255,255,255,0.15);  /* 🔥 加這個 */
-
-  padding:20px 22px;
-  border-radius:12px;
-
-  box-shadow:0 20px 50px rgba(0,0,0,0.25);
-}
 
 /* 🔥 標題 */
 .final-title{
