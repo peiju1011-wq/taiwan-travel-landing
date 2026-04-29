@@ -272,7 +272,7 @@ h2{
 .final-section{
   position:relative;
   height:auto;   /* 🔥 直接不要限制高度 */
-  min-height:65vh
+  min-height:65vh;   
   overflow:hidden;      /* 🔥 不讓圖亂跑 */
   
 }
@@ -290,28 +290,20 @@ h2{
 
 
 
+
 .final-inner{
-  position:absolute;
-  top:1%;   /* 🔥 改這裡 */
-  left:px;
-  transform:none;   /* 🔥 拿掉置中 */
-  max-width:80%;
-  color:#fff;
+  position:static;       
+  margin-top:20px;
 
-  /* 🔥 新增這段 */
-background:linear-gradient(
-  to right,
-  rgba(61, 37, 37, 0.433) 0%,
-  rgba(118, 63, 63, 0.283) 40%,
-  transparent 75%
-);
+  max-width:100%;
+  color:#222;        
 
-  padding:30px 16px;
-  border-radius:10px;
+  background:none;       
 
-  text-shadow:
-    0 2px 4px rgba(44, 27, 27, 0.7),
-    0 6px 16px rgba(19, 11, 11, 0.35);
+  padding:0;           
+  border-radius:0;
+
+  text-shadow:none;    
 }
 
 
@@ -325,7 +317,8 @@ background:linear-gradient(
 @media (max-width:768px){
 
   .final-section{
-    height:80vh;
+   height:auto;    
+    min-height:70vh;    
   }
   .final-scroll{
     width:100%;
@@ -357,54 +350,45 @@ background:linear-gradient(
 
 
 
-
-
 /* 🔥 標題 */
 .final-title{
-  font-size:23px;   /* 原本30 */
+  font-size:23px;
   letter-spacing:0.15em;
-
-    text-shadow:
-    0 2px 4px rgba(45, 26, 26, 0.931),
-    0 6px 14px rgba(77, 44, 51, 0.212);
+  color:#111;
+  text-shadow:none;
 }
+
 /* 🔥 文字 */
 .final-text{
   font-size:14px;
   line-height:1.8;
-
-  text-shadow:
-    0 2px 4px rgba(46, 25, 25, 0.931),
-    0 6px 14px rgba(60, 30, 36, 0.675);
+  color:#222;
+  text-shadow:none;
 }
 
 /* 🔥 英文 */
 .final-en{
   margin-top:10px;
-  opacity:0.7;
+  opacity:0.65;
   font-size:13px;
-
-    text-shadow:
-    0 2px 4px rgba(26, 0, 0, 0.931),
-    0 6px 14px rgba(166, 93, 109, 0.675);
+  color:#333;
+  text-shadow:none;
 }
 
-/* 🔥 按鈕改左對齊（重點） */
+/* 🔥 按鈕區 */
 .final-cta{
-  margin-top:10px;
+  margin-top:18px;
   display:flex;
   gap:12px;
   justify-content:flex-start;
   flex-wrap:wrap;
 }
+
 .final-cta .cta{
   box-shadow:
-    0 8px 20px rgba(0,0,0,0.25),
-    0 2px 6px rgba(0,0,0,0.15);
+    0 8px 20px rgba(0,0,0,0.15),
+    0 2px 6px rgba(0,0,0,0.08);
 }
-  
-
-
 
 
 /* 第二顆變玻璃感 */
