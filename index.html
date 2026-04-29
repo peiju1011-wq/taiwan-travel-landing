@@ -130,7 +130,7 @@ h2{
 @media (max-width:768px){
 
   .cta-wrap{
-  
+    flex-direction:column;   /* 🔥 關鍵 */
     align-items:center;
     gap:10px;
   }
@@ -271,7 +271,8 @@ h2{
 
 .final-section{
   position:relative;
-  height:65vh;          /* 🔥 固定高度（重點） */
+  height:auto;   /* 🔥 直接不要限制高度 */
+  min-height:65vh
   overflow:hidden;      /* 🔥 不讓圖亂跑 */
   
 }
@@ -300,8 +301,8 @@ h2{
   /* 🔥 新增這段 */
 background:linear-gradient(
   to right,
-  rgba(0,0,0,0.32) 0%,
-  rgba(240,143,167,0.10) 40%,
+  rgba(61, 37, 37, 0.433) 0%,
+  rgba(118, 63, 63, 0.283) 40%,
   transparent 75%
 );
 
@@ -324,7 +325,7 @@ background:linear-gradient(
 @media (max-width:768px){
 
   .final-section{
-    height:70vh;
+    height:80vh;
   }
   .final-scroll{
     width:100%;
