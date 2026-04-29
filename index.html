@@ -262,29 +262,28 @@ h2{
 .next{ right:20px; }
 
 
-.final-section{
-  position:relative;
-
-  min-height:50vh;
-
-  overflow-x:auto;                      /* 🔥 可以滑 */
-  -webkit-overflow-scrolling:touch;
-
-  margin-bottom:3px;
-  padding:0;                            /* 🔥 關鍵：不要內距 */
-
-  background:none;                      /* 🔥 關鍵：移除背景圖 */
-}
 
 .final-scroll{
   position:relative;
-  min-width:1100px;   /* 🔥 控制可滑寬度（可調 900~1200） */
+  width:100%;        /* 🔥 改這個 */
+  min-width:100%;    /* 🔥 不要再 1100px */
+}
+
+.final-section{
+  position:relative;
+  height:60vh;          /* 🔥 固定高度（重點） */
+  overflow:hidden;      /* 🔥 不讓圖亂跑 */
+  
 }
 
 .final-img{
   width:100%;
-  display:block;
+  height:100%;
+  object-fit:cover;     /* 🔥 關鍵：像 IG 那樣裁切 */
+  object-position:center 10%; /* 🔥 往上對齊 */
+  
 }
+
 
 
 
@@ -292,26 +291,25 @@ h2{
 .final-inner{
   position:absolute;
   top:50%;
-  left:40px;
+  left:24px;
   transform:translateY(-50%);
-
-  max-width:380px;
+  max-width:80%;
   color:#fff;
 
   /* 🔥 新增這段 */
-  background:linear-gradient(
-    to right,
-    rgba(0,0,0,0.45),
-    rgba(0,0,0,0.25),
-    transparent
-  );
+background:linear-gradient(
+  to right,
+  rgba(0,0,0,0.28) 0%,
+  rgba(0,0,0,0.12) 40%,
+  transparent 75%
+);
 
   padding:16px 18px;
   border-radius:10px;
 
   text-shadow:
-    0 2px 6px rgba(0,0,0,0.8),
-    0 10px 22px rgba(0,0,0,0.45);
+    0 2px 4px rgba(0,0,0,0.7),
+    0 6px 16px rgba(0,0,0,0.35);
 }
 
 
@@ -319,10 +317,6 @@ h2{
   display:none;
 }
 
-.final-section{
-  -ms-overflow-style:none;
-  scrollbar-width:none;
-}
 /* 按鈕區 */
 .final-cta{
   margin-top:30px;
@@ -334,17 +328,19 @@ h2{
 @media (max-width:768px){
 
   .final-section{
-    padding:0;   /* 🔥 不要內距 */
+    height:55vh;
   }
-
   .final-scroll{
-    min-width:900px;   /* 🔥 手機滑動寬度 */
+    width:100%;
   }
 
   .final-inner{
-    left:24px;
-    max-width:300px;
+    left:20px;
+    right:20px;
+    max-width:none;
   }
+
+}
 
 }
 
@@ -385,7 +381,7 @@ h2{
 
 /* 🔥 按鈕改左對齊（重點） */
 .final-cta{
-  margin-top:28px;
+  margin-top:24px;
   display:flex;
   gap:12px;
   justify-content:flex-start;   /* 🔥 原本center → 改這個 */
@@ -586,39 +582,6 @@ h2{
 
 
 
-.final-scroll{
-  position:relative;
-  min-width:900px;                    /* 🔥 比手機寬 */
-}
-
-.final-img{
-  width:100%;
-  display:block;
-}
-
-/* 🔥 文字蓋在圖上 */
-.final-inner{
-  position:absolute;
-  top:50%;
-  left:40px;
-  transform:translateY(-50%);
-
-  max-width:380px;   /* 🔥 建議用這個（不壓到右邊留言） */
-
-  color:#fff;
-
-  text-shadow:
-    0 2px 6px rgba(0,0,0,0.7),
-    0 8px 18px rgba(0,0,0,0.3);
-}
-@media (max-width:768px){
-
-  .final-inner{
-    left:24px;        /* 🔥 往內一點，避免貼邊 */
-    max-width:300px;  /* 🔥 手機再縮，避免壓畫面 */
-  }
-
-}
 
 }
 
