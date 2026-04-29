@@ -291,9 +291,9 @@ h2{
 
 .final-inner{
   position:absolute;
-  top:50%;
+  top:20%;   /* 🔥 改這裡 */
   left:24px;
-  transform:translateY(-50%);
+  transform:none;   /* 🔥 拿掉置中 */
   max-width:80%;
   color:#fff;
 
@@ -324,16 +324,18 @@ background:linear-gradient(
 @media (max-width:768px){
 
   .final-section{
-    height:65vh;
+    height:70vh;
   }
   .final-scroll{
     width:100%;
   }
 
   .final-inner{
-    left:20px;
-    right:20px;
-    max-width:none;
+@media (max-width:768px){
+  .final-inner{
+    top:18%;   /* 🔥 手機再往上一點 */
+  }
+}
   }
 
 }
@@ -388,7 +390,7 @@ background:linear-gradient(
 
 /* 🔥 按鈕改左對齊（重點） */
 .final-cta{
-  margin-top:20px;
+  margin-top:10px;
   display:flex;
   gap:12px;
   justify-content:flex-start;
