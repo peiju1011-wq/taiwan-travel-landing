@@ -615,8 +615,36 @@ h2{
     width:90%;
   }
 
+/* 🔥 底部導航（所有裝置） */
+.nav-bottom{
+  position:absolute;
+  bottom:200px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  gap:60px;
+  z-index:1001;
+  padding-bottom:env(safe-area-inset-bottom);
+}
 
+.nav-btn{
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(6px);
+  color:#ffffff;
+  font-size:26px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  transition:0.3s;
+}
 
+.nav-btn:active{
+  transform:scale(0.9);
+}
 
 }
 
@@ -907,10 +935,12 @@ Lantern streets, tea houses, and mountain views.
   <span class="close" onclick="closeLightbox()">×</span>
 
   <img id="lightbox-img">
+<div class="nav-bottom">
 
-  <div class="nav prev" onclick="changeSlide(-1)">‹</div>
-  <div class="nav next" onclick="changeSlide(1)">›</div>
+  <div class="nav-btn" onclick="changeSlide(-1)">‹</div>
+  <div class="nav-btn" onclick="changeSlide(1)">›</div>
 
+</div>
 </div>
 
 <section class="day">
