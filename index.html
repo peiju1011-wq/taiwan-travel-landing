@@ -810,58 +810,81 @@ h2{
   margin-top:-30px;
 }
 
-
+/* ===== 分享區 ===== */
 .share-wrap{
-  margin-top:30px;
+  margin-top:40px;
   text-align:center;
 }
 
 .share-title{
   font-size:14px;
   opacity:0.7;
-  margin-bottom:12px;
+  margin-bottom:14px;
   letter-spacing:0.1em;
 }
 
+/* 按鈕排版 */
 .share-buttons{
   display:flex;
   justify-content:center;
-  gap:10px;
+  gap:12px;
   flex-wrap:wrap;
 }
 
+/* 按鈕共用 */
 .share-btn{
+  display:flex;
+  align-items:center;
+  gap:6px;
+
   font-size:13px;
-  padding:8px 14px;
+  padding:10px 18px;
   border-radius:999px;
   text-decoration:none;
   border:none;
   cursor:pointer;
-  transition:0.3s;
+
+  transition:all 0.25s ease;
+  font-weight:500;
+  letter-spacing:0.05em;
+}
+
+/* icon */
+.share-btn .icon{
+  font-size:14px;
 }
 
 /* LINE */
 .share-btn.line{
   background:#06C755;
-  color:white;
+  color:#fff;
+  box-shadow:0 6px 14px rgba(6,199,85,0.25);
 }
 
-/* FB */
+/* Facebook */
 .share-btn.fb{
   background:#1877F2;
-  color:white;
+  color:#fff;
+  box-shadow:0 6px 14px rgba(24,119,242,0.25);
 }
 
-/* COPY */
+/* COPY（補上🔥） */
 .share-btn.copy{
-  background:#eee;
+  background:#f5f5f5;
   color:#333;
+  border:1px solid #e5e5e5;
+  box-shadow:0 4px 10px rgba(0,0,0,0.08);
 }
 
 /* hover */
 .share-btn:hover{
-  transform:translateY(-2px);
-  opacity:0.9;
+  transform:translateY(-3px);
+  filter:brightness(1.05);
+}
+
+/* active（點擊） */
+.share-btn:active{
+  transform:scale(0.92);
 }
 </style>
 </head>
@@ -1382,7 +1405,8 @@ A mix of tradition, culture, and local souvenirs.
 <!-- 🔥 分享 -->
 <div class="share-wrap">
 
-  <p class="share-title">📤 分享這條路線</p>
+  <p class="share-title">
+北海岸 × 九份 × 新莊好吃好玩｜直接分享👇</p>
 
   <div class="share-buttons">
 
@@ -1390,22 +1414,24 @@ A mix of tradition, culture, and local souvenirs.
     <a href="https://social-plugins.line.me/lineit/share?url=https://peiju1011-wq.github.io/taiwan-travel-landing/"
        target="_blank"
        class="share-btn line">
-      LINE
+      <span class="icon">🟢</span> LINE
     </a>
 
     <!-- Facebook -->
     <a href="https://www.facebook.com/sharer/sharer.php?u=https://peiju1011-wq.github.io/taiwan-travel-landing/"
        target="_blank"
        class="share-btn fb">
-      Facebook
+      <span class="icon">🔵</span> Facebook
     </a>
 
     <!-- 複製連結 -->
-    <button class="share-btn copy" onclick="copyLink()">
-      複製連結
+    <button class="share-btn copy" onclick="copyLink(this)">
+      <span class="icon">🔗</span> 複製連結
     </button>
 
   </div>
+
+</div>
 
 </div>
 
@@ -1581,10 +1607,16 @@ document.querySelectorAll(".menu-item").forEach(item => {
 </script>
 
 <script>
-function copyLink(){
+function copyLink(btn){
   const url = "https://peiju1011-wq.github.io/taiwan-travel-landing/";
   navigator.clipboard.writeText(url);
-  alert("已複製連結！");
+
+  const original = btn.innerHTML;
+  btn.innerHTML = "✅ 已複製";
+
+  setTimeout(()=>{
+    btn.innerHTML = original;
+  }, 1500);
 }
 </script>
 
