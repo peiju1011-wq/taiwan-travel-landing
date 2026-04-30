@@ -653,6 +653,35 @@ h2{
     gap:50px;
   }
 
+.day1-img{
+  position:relative;
+  width:100%;
+  height:360px;
+  overflow:hidden;
+  border-radius:12px;
+  margin-bottom:20px;
+}
+
+.day1-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center top;
+  display:block;
+}
+
+.day1-img::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+
+  background:linear-gradient(
+    to bottom,
+    rgba(0,0,0,0) 35%,
+    rgba(0,0,0,0.55) 100%
+  );
+}
 }
 
 
@@ -673,15 +702,11 @@ h2{
 
 <section class="day">
 
-<img src="./images/day1.jpg" style="
-  width:100%;
-  height:220px;
-  object-fit:cover;
-  border-radius:12px;
-  margin-bottom:20px;
-">
+<div class="day1-img">
+  <img src="./images/day1.jpg">
+</div>
 
-<h2>DAY 1｜台北城市經典</h2>
+  <h2>DAY 1｜台北城市經典</h2>
 
 <p>
 第一天先從台北最經典的地標開始。<br><br>
@@ -707,10 +732,11 @@ Taipei 101, Liberty Square, and Ximending nightlife.
 <section class="day">
 <img src="./images/day2.jpg" style="
   width:100%;
-  height:220px;
+  height:360px;
   object-fit:cover;
   border-radius:12px;
   margin-bottom:20px;
+  
 ">
 
 <h2>DAY 2｜北海岸絕美海景路線</h2>
@@ -740,7 +766,7 @@ Yehliu, Jinshan Old Street, and Tamsui sunset.
 <section class="day">
 <img src="./images/day3.jpg" style="
   width:100%;
-  height:220px;
+  height:360px;
   object-fit:cover;
   border-radius:12px;
   margin-bottom:20px;
@@ -773,7 +799,7 @@ Lantern streets, tea houses, and mountain views.
 
 <img src="./images/day4.png" style="
   width:100%;
-  height:220px;
+  height:360px;
   object-fit:cover;
   border-radius:12px;
   margin-bottom:20px;
@@ -982,10 +1008,11 @@ Lantern streets, tea houses, and mountain views.
 <section class="day">
 <img src="./images/day5.jpg" style="
   width:100%;
-  height:220px;
+  height:360px;
   object-fit:cover;
   border-radius:12px;
   margin-bottom:20px;
+  object-position: center 60%;
 ">
 <h2>DAY 5｜大稻埕與旅程收尾</h2>
 
