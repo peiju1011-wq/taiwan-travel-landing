@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <title>台灣5天4夜終極路線｜北海岸＋九份＋新莊雪花冰推薦</title>
-<meta name="description" content="台灣旅遊推薦！北海岸、九份與新莊雪花冰名店夏雪覓境，一次玩遍經典美景與在地美食。" />
+<meta name="description" content="台灣旅遊推薦！北海岸、九份與台北在地美食，一次玩遍經典美景與在地行程。" />
 <meta name="keywords" content="台灣旅遊, 北海岸, 九份, 新莊美食, 雪花冰推薦, 夏雪覓境">
 <link rel="canonical" href="https://peiju1011-wq.github.io/taiwan-travel-landing/" />
 <!-- ===== Open Graph ===== -->
@@ -698,9 +698,116 @@ h2{
 }
 
 
+.ig-box{
+  width:100%;
+  max-width:380px;   /* 🔥 改小一點更穩 */
+  margin:40px auto;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 12px 30px rgba(0,0,0,0.18);
+}
+
+/* 🔥 把 IG 原本的邊框拿掉 */
+.instagram-media{
+  margin:0 !important;
+  border:0 !important;
+  max-width:100% !important;
+  border-radius:16px !important;   /* 🔥 加這行 */
+}
+
+/* 🔥 只影響新月橋這顆 */
+.moon-cta{
+  margin-top:-25px;   /* 🔥 往上 */
+  margin-bottom:10px;
+}
+
+/* ===== 新月橋 CTA（優化版） ===== */
+
+.cta.secondary.moon-btn{
+  background:#f08fa7;
+  border:1px solid rgba(255,255,255,0.6);
+  color:#ffffff;
+
+  text-shadow:
+    0 1px 2px rgba(70,16,16,0.6);
+
+  box-shadow:
+    0 6px 18px rgba(240,143,167,0.25);   /* 🔥 改成同色系 */
+
+  transition:all 0.3s ease;
+
+  letter-spacing:0.05em;
+  padding:10px 18px;
+}
+
+/* hover */
+.cta.secondary.moon-btn:hover{
+  background:#fe789a;
+  color:#ffffff;
+
+  transform:translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(254,120,154,0.4);  /* 🔥 更立體 */
+}
+
+/* active（點擊） */
+.cta.secondary.moon-btn:active{
+  transform:translateY(0) scale(0.95);
+
+  box-shadow:
+    0 3px 10px rgba(240,143,167,0.2);   /* 🔥 不用白色陰影（會怪） */
+}
+
+/* focus */
+.cta.secondary.moon-btn:focus{
+  outline:none;
+
+  box-shadow:
+    0 0 0 2px rgba(254,120,154,0.25),
+    0 6px 18px rgba(240,143,167,0.25);
+}
+
+/* ===== 阿甘姨 CTA（同權重版本） ===== */
 
 
+.cta.secondary.agan-btn{
+  background:#f08fa7;
+  border:1px solid rgba(250, 250, 250, 0.803);
+  color:#ffffff;
 
+  text-shadow:
+    0 1px 3px rgba(70, 16, 16, 0.718);
+
+  box-shadow:0 6px 18px rgba(67, 67, 67, 0.08);
+  transition:all 0.3s ease;
+
+  letter-spacing:0.05em;
+  padding:10px 18px;
+}
+
+/* hover */
+.cta.secondary.agan-btn:hover{
+  background:#fe789a;
+  color:#ffffff;
+  transform:translateY(-2px);
+  box-shadow:0 10px 25px rgba(254,120,154,0.35);
+}
+
+/* active（點擊） */
+.cta.secondary.agan-btn:active{
+  transform:translateY(0) scale(0.95);
+  box-shadow:0 4px 12px rgb(255, 255, 255);
+}
+
+/* focus（鍵盤/手機點擊） */
+.cta.secondary.agan-btn:focus{
+  outline:none;
+  box-shadow:0 0 0 2px rgba(254,120,154,0.3);
+}
+.day .agan-cta{
+  margin-top:-30px;
+}
 </style>
 </head>
 
@@ -779,32 +886,60 @@ Yehliu, Jinshan Old Street, and Tamsui sunset.
 
 
 <section class="day">
-<img src="./images/day3.jpg" style="
-  width:100%;
-  height:360px;
-  object-fit:cover;
-  border-radius:12px;
-  margin-bottom:20px;
-">
-<h2>DAY 3｜九份山城浪漫</h2>
 
-<p>
-第三天節奏放慢，上山到九份。<br><br>
+  <img src="./images/day3.jpg" class="day-img">
 
-燈籠階梯、茶樓、海景，隨便拍都像電影。<br>
-芋圓、茶點邊走邊吃，是最放鬆的一天。
-</p>
+  <h2>DAY 3｜九份山城浪漫</h2>
 
-<p class="en">
-A slow day in Jiufen.
-Lantern streets, tea houses, and mountain views.
-</p>
+  <!-- 🔥 旅遊文（補回來） -->
+  <p>
+    第三天把節奏放慢，走進九份山城。<br><br>
 
-<p class="review">
-💬 旅客心得：<br>
-「九份晚上真的很像電影場景」<br>
-「芋圓很好吃，邊走邊吃很舒服」
-</p>
+    燈籠階梯、茶樓、山海景交錯，<br>
+    隨便走都像電影場景。<br><br>
+
+    可以慢慢逛、慢慢拍，<br>
+    感受那種介於觀光與在地生活之間的節奏。<br><br>
+
+    走累了，也很適合找間小店坐下來，<br>
+    邊吃點甜品，邊看山景放空一下。
+  </p>
+
+  <!-- 🔥 現場實拍 -->
+  <h3 style="display:flex;align-items:center;gap:10px;">
+    <img src="https://cdn-icons-png.flaticon.com/512/747/747376.png" width="20">
+    現場實拍
+  </h3>
+
+  <p style="font-size:14px;opacity:0.8;">
+    阿甘姨芋圓在網路上也有不少實拍影片，<br>
+    很多人都是看完分享後，實際走到九份才來吃。
+  </p>
+
+  <!-- 🔥 IG影片 -->
+  <div style="text-align:center; margin:40px 0;">
+
+    <div class="ig-box">
+
+      <blockquote 
+        class="instagram-media" 
+        data-instgrm-permalink="https://www.instagram.com/reel/C8qykbhSGHP/" 
+        data-instgrm-version="14">
+      </blockquote>
+
+    </div>
+
+  </div>
+
+<div class="cta-wrap agan-cta">
+
+  <a class="cta secondary agan-btn"
+     href="https://maps.app.goo.gl/MAvVpMAEZFtzSuXz5"
+     target="_blank">
+    📍 阿甘姨芋圓（九份在地推薦）
+  </a>
+
+</div>
 
 </section>
 
@@ -819,23 +954,40 @@ Lantern streets, tea houses, and mountain views.
   border-radius:12px;
   margin-bottom:20px;
 ">
+<!-- 🔥 CTA -->
+<div class="cta-wrap moon-cta">
+
+  <a class="cta secondary moon-btn"
+     href="https://maps.app.goo.gl/jLxFUJEAybPgdKP6A"
+     target="_blank">
+    📍 新月橋位置+腳踏車租借
+  </a>
+
+</div>
+
+
+  </div>
+
 <h2>🚴 DAY 4｜雪花冰+新月橋夜騎腳踏車</h2>
+
 
 <h3 style="display:flex;align-items:center;gap:10px;">
 <span style="font-size:20px;">🍧</span>
-夏雪覓境｜新莊雪花冰推薦
+在地人推薦｜新莊甜品
 </h3>
 
+
 <p>
-如果這趟旅程有一個「一定會記住的地方」，就是這裡。<br><br>
+第四天回到台北，安排一個比較輕鬆的行程。<br><br>
 
-位於新莊化成路，這間雪花冰店在在地人口中評價非常高。<br><br>
+白天可以在新莊附近走走，  
+傍晚到新月橋騎腳踏車，看夕陽慢慢變成夜景。<br><br>
 
-✔ Google高評價（4.8⭐）<br>
-✔ 有停車場（對開車族超重要）<br>
-✔ 空間寬敞舒適<br><br>
+如果想找個地方坐下來休息，  
+在地人也會推薦幾間不錯的甜品店。<br><br>
 
-很多人不是特地來，而是「來過一次就會再回來」。
+像是夏雪覓境這類雪花冰店，  
+環境舒服、份量也夠，很適合當作行程中的休息點。
 </p>
 
 <!-- 🔥 商品 -->
@@ -952,7 +1104,7 @@ Lantern streets, tea houses, and mountain views.
      href="https://maps.google.com/?q=新莊化成路 夏雪覓境"
      target="_blank"
      rel="noopener noreferrer">
-    📍 立即導航（現在出發）
+    📍 夏雪雪花冰品（新莊在地推薦）
   </a>
 
   <a class="cta secondary" 
@@ -1064,19 +1216,31 @@ A mix of tradition, culture, and local souvenirs.
     <!-- 🔥 文字內容 -->
     <div class="final-inner">
 
-      <h2 class="final-title">📌 收藏這條路線</h2>
+<h2 class="final-title">📌 收藏這條路線</h2>
 
 <p class="final-text">
-從 <strong>台北城市</strong> → <strong>北海岸</strong> → <strong>九份</strong> → <br><br>
+<strong>DAY 1｜台北城市</strong><br>
+台北101、自由廣場、西門町，<br>
+從白天到夜晚，感受城市最經典的節奏。<br><br>
 
-第4天，在 <strong>新莊夏雪覓境</strong> 吃完雪花冰後，<br> 
-可以順著河濱到新月橋騎腳踏車，<br>
-看著夕陽慢慢變成夜景，燈光一盞一盞亮起來。<br><br>
+<strong>DAY 2｜北海岸</strong><br>
+野柳、金山、淡水一路往北，<br>
+海景＋夕陽，是台灣最放鬆的一段風景。<br><br>
 
-第5天再用 <strong>大稻埕</strong> 收尾，慢慢逛、慢慢買，<br>
+<strong>DAY 3｜九份</strong><br>
+燈籠街道、茶樓、山城夜景，<br>
+隨便走都像電影，慢慢逛最剛好。<br><br>
+
+<strong>DAY 4｜新莊</strong><br>
+中午在地夏雪覓境美食+雪花冰，<br>
+下午可以在新月橋騎腳踏車，<br>
+一路從夕陽騎到夜景，整個氛圍會很放鬆。<br><br>
+
+<strong>DAY 5｜大稻埕</strong><br>
+用老街與伴手禮收尾，慢慢逛、慢慢買，<br>
 讓整趟旅程停在最剛好的節奏。<br><br>
 
-很多人走完後，記住的不只是風景，<br>
+令人放鬆的不只是風景，
 而是台灣「剛剛好的生活感」。
 </p>
 
