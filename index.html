@@ -1402,29 +1402,31 @@ A mix of tradition, culture, and local souvenirs.
 而是台灣那種「剛剛好的生活感」。
 </p>
 
+
 <!-- 🔥 分享 -->
 <div class="share-wrap">
 
   <p class="share-title">
-北海岸 × 九份 × 新莊好吃好玩｜<br>直接分享👇</p>
+    這條路線真的很值得存👇
+  </p>
 
   <div class="share-buttons">
 
     <!-- LINE -->
-    <a href="https://social-plugins.line.me/lineit/share?url=https://peiju1011-wq.github.io/taiwan-travel-landing/"
-       target="_blank"
-       class="share-btn line">
+    <a id="line-share"
+       class="share-btn line"
+       target="_blank">
       <span class="icon">🟢</span> LINE
     </a>
 
     <!-- Facebook -->
-    <a href="https://www.facebook.com/sharer/sharer.php?u=https://peiju1011-wq.github.io/taiwan-travel-landing/"
-       target="_blank"
-       class="share-btn fb">
+    <a id="fb-share"
+       class="share-btn fb"
+       target="_blank">
       <span class="icon">🔵</span> Facebook
     </a>
 
-    <!-- 複製連結 -->
+    <!-- COPY -->
     <button class="share-btn copy" onclick="copyLink(this)">
       <span class="icon">🔗</span> 複製連結
     </button>
@@ -1605,19 +1607,23 @@ document.querySelectorAll(".menu-item").forEach(item => {
   });
 });
 </script>
-
 <script>
-function copyLink(btn){
-  const url = "https://peiju1011-wq.github.io/taiwan-travel-landing/";
-  navigator.clipboard.writeText(url);
+window.addEventListener("DOMContentLoaded", () => {
 
-  const original = btn.innerHTML;
-  btn.innerHTML = "✅ 已複製";
+  const currentUrl = encodeURIComponent(window.location.href);
 
-  setTimeout(()=>{
-    btn.innerHTML = original;
-  }, 1500);
-}
+  const line = document.getElementById("line-share");
+  const fb = document.getElementById("fb-share");
+
+  if(line){
+    line.href = `https://social-plugins.line.me/lineit/share?url=${currentUrl}`;
+  }
+
+  if(fb){
+    fb.href = `https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`;
+  }
+
+});
 </script>
 
 </body>
