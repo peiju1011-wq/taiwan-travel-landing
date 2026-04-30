@@ -808,6 +808,60 @@ h2{
 .day .agan-cta{
   margin-top:-30px;
 }
+
+
+.share-wrap{
+  margin-top:30px;
+  text-align:center;
+}
+
+.share-title{
+  font-size:14px;
+  opacity:0.7;
+  margin-bottom:12px;
+  letter-spacing:0.1em;
+}
+
+.share-buttons{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.share-btn{
+  font-size:13px;
+  padding:8px 14px;
+  border-radius:999px;
+  text-decoration:none;
+  border:none;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+/* LINE */
+.share-btn.line{
+  background:#06C755;
+  color:white;
+}
+
+/* FB */
+.share-btn.fb{
+  background:#1877F2;
+  color:white;
+}
+
+/* COPY */
+.share-btn.copy{
+  background:#eee;
+  color:#333;
+}
+
+/* hover */
+.share-btn:hover{
+  transform:translateY(-2px);
+  opacity:0.9;
+}
 </style>
 </head>
 
@@ -1324,25 +1378,35 @@ A mix of tradition, culture, and local souvenirs.
 而是台灣那種「剛剛好的生活感」。
 </p>
 
-      <p class="final-en">
-        Save this route for your next Taiwan trip.
-      </p>
+<!-- 🔥 分享 -->
+<div class="share-wrap">
 
-      <div class="final-cta">
+  <p class="share-title">📤 分享這條路線</p>
 
-        <a class="cta" 
-           href="https://maps.google.com/?q=新莊化成路 夏雪覓境"
-           target="_blank"
-           rel="noopener noreferrer">
-          📍 直接導航去吃
-        </a>
+  <div class="share-buttons">
 
-        <a class="cta secondary" 
-           href="https://www.facebook.com/cosysnowofficial/photos"
-           target="_blank"
-           rel="noopener noreferrer">
-          📸 看更多實拍
-        </a>
+    <!-- LINE -->
+    <a href="https://social-plugins.line.me/lineit/share?url=https://peiju1011-wq.github.io/taiwan-travel-landing/"
+       target="_blank"
+       class="share-btn line">
+      LINE
+    </a>
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://peiju1011-wq.github.io/taiwan-travel-landing/"
+       target="_blank"
+       class="share-btn fb">
+      Facebook
+    </a>
+
+    <!-- 複製連結 -->
+    <button class="share-btn copy" onclick="copyLink()">
+      複製連結
+    </button>
+
+  </div>
+
+</div>
 
       </div>
 
@@ -1513,6 +1577,14 @@ document.querySelectorAll(".menu-item").forEach(item => {
 
   });
 });
+</script>
+
+<script>
+function copyLink(){
+  const url = "https://peiju1011-wq.github.io/taiwan-travel-landing/";
+  navigator.clipboard.writeText(url);
+  alert("已複製連結！");
+}
 </script>
 
 </body>
