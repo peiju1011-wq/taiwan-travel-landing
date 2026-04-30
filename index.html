@@ -1631,7 +1631,6 @@ function copyLink(btn){
   const url = window.location.href;
 
   try{
-    // 🔥 優先用新方法
     navigator.clipboard.writeText(url);
     showCopied(btn);
   }catch(err){
@@ -1639,16 +1638,13 @@ function copyLink(btn){
   }
 }
 
-// 🔥 fallback（關鍵）
 function fallbackCopy(text, btn){
   const textarea = document.createElement("textarea");
   textarea.value = text;
-
   textarea.style.position = "fixed";
   textarea.style.left = "-9999px";
 
   document.body.appendChild(textarea);
-  textarea.focus();
   textarea.select();
 
   try{
@@ -1661,13 +1657,23 @@ function fallbackCopy(text, btn){
   document.body.removeChild(textarea);
 }
 
-// 🔥 UI回饋
 function showCopied(btn){
   const original = btn.innerHTML;
+
+  // 🔥 改這裡（更有感）
   btn.innerHTML = "✅ 已複製";
+  btn.style.background = "#06C755";   // 變綠色
+  btn.style.color = "#fff";
+
+  // 🔥 再加一個提示（關鍵）
+  setTimeout(()=>{
+    alert("連結已複製，可以直接貼給朋友！");
+  }, 200);
 
   setTimeout(()=>{
     btn.innerHTML = original;
+    btn.style.background = "";
+    btn.style.color = "";
   },1500);
 }
 </script>
