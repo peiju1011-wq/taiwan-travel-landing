@@ -1626,5 +1626,51 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
+<script>
+function copyLink(btn){
+  const url = window.location.href;
+
+  try{
+    // 🔥 優先用新方法
+    navigator.clipboard.writeText(url);
+    showCopied(btn);
+  }catch(err){
+    fallbackCopy(url, btn);
+  }
+}
+
+// 🔥 fallback（關鍵）
+function fallbackCopy(text, btn){
+  const textarea = document.createElement("textarea");
+  textarea.value = text;
+
+  textarea.style.position = "fixed";
+  textarea.style.left = "-9999px";
+
+  document.body.appendChild(textarea);
+  textarea.focus();
+  textarea.select();
+
+  try{
+    document.execCommand("copy");
+    showCopied(btn);
+  }catch(err){
+    alert("請手動複製網址 🙏");
+  }
+
+  document.body.removeChild(textarea);
+}
+
+// 🔥 UI回饋
+function showCopied(btn){
+  const original = btn.innerHTML;
+  btn.innerHTML = "✅ 已複製";
+
+  setTimeout(()=>{
+    btn.innerHTML = original;
+  },1500);
+}
+</script>
+
 </body>
 </html>
