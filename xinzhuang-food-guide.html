@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8" />
+<link rel="icon" type="image/png" href="./images/favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>新莊美食推薦｜在地人會帶朋友吃的5間店</title>
+<meta name="description" content="新莊美食推薦！整理在地人會帶朋友吃的5間店，從夏雪覓境雪花冰、牛肉麵、宵夜、咖啡店到在地老店，適合新莊一日遊與朋友聚餐。" />
+<meta name="keywords" content="新莊美食推薦, 新莊美食, 新莊甜點, 新莊雪花冰, 新莊宵夜, 新莊咖啡店, 新莊老店" />
+<meta name="robots" content="index, follow" />
+
+<link rel="canonical" href="https://peiju1011-wq.github.io/taiwan-travel-landing/xinzhuang-food-guide.html" />
+
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="台灣旅遊攻略" />
+<meta property="og:locale" content="zh_TW" />
+<meta property="og:title" content="新莊美食推薦｜在地人會帶朋友吃的5間店" />
+<meta property="og:description" content="朋友來新莊要吃什麼？從雪花冰、熱食、宵夜、咖啡店到在地老店，整理一條剛剛好的新莊美食路線。" />
+<meta property="og:url" content="https://peiju1011-wq.github.io/taiwan-travel-landing/xinzhuang-food-guide.html" />
+<meta property="og:image" content="https://peiju1011-wq.github.io/taiwan-travel-landing/images/og2.png?v=4" />
+
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;overflow-x:hidden}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC","Microsoft JhengHei",sans-serif;
+  background:#FFF5F7;
+  color:#111;
+}
+img{max-width:100%;height:auto}
+
+.hero{
+  min-height:78vh;
+  padding:0 22px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+  background:
+    linear-gradient(rgba(0,0,0,.38), rgba(0,0,0,.55)),
+    url('./images/day.png') center/cover no-repeat;
+}
+
+
+.hero h1{
+  font-size:clamp(26px,6vw,42px);
+  line-height:1.35;
+  letter-spacing:.08em;
+  text-shadow:0 3px 14px rgba(0,0,0,.6);
+}
+.hero .en{
+  margin-top:12px;
+  font-size:12px;
+  letter-spacing:.22em;
+  opacity:.85;
+}
+.hero p{
+  margin-top:18px;
+  font-size:15px;
+  line-height:1.8;
+  letter-spacing:.05em;
+}
+
+section{
+  max-width:900px;
+  margin:auto;
+  padding:52px 20px;
+}
+.lead{
+  text-align:center;
+  max-width:720px;
+}
+.lead h2{
+  font-size:24px;
+  line-height:1.45;
+  margin-bottom:18px;
+}
+.lead p{
+  font-size:15px;
+  line-height:1.9;
+  color:#333;
+}
+strong{font-weight:650;color:#111}
+
+.food-card{
+  background:#fff;
+  border-radius:22px;
+  padding:24px;
+  margin-bottom:28px;
+  box-shadow:0 12px 34px rgba(0,0,0,.08);
+}
+.food-card img{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  border-radius:16px;
+  margin-bottom:18px;
+}
+.food-card h2{
+  font-size:22px;
+  line-height:1.4;
+  margin:0 0 12px;
+}
+.food-card .tag{
+  display:inline-block;
+  padding:6px 12px;
+  border-radius:999px;
+  background:#ffe8ef;
+  color:#d94d73;
+  font-size:13px;
+  margin-bottom:14px;
+}
+.food-card p{
+  font-size:15px;
+  line-height:1.9;
+  color:#333;
+}
+.note{
+  background:#fff8fa;
+  border-left:4px solid #f08fa7;
+  padding:14px 16px;
+  border-radius:10px;
+  font-size:14px;
+  line-height:1.8;
+  margin-top:16px;
+}
+.cta-wrap{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:18px;
+}
+.cta{
+  display:inline-block;
+  padding:11px 18px;
+  border-radius:999px;
+  background:#f08fa7;
+  color:#fff;
+  text-decoration:none;
+  font-size:14px;
+  box-shadow:0 8px 22px rgba(240,143,167,.28);
+}
+.cta.secondary{
+  background:#fff;
+  color:#333;
+  border:1px solid #eee;
+  box-shadow:0 6px 18px rgba(0,0,0,.06);
+}
+
+.route-box{
+  background:#111;
+  color:#fff;
+  border-radius:24px;
+  padding:32px 22px;
+  text-align:center;
+}
+.route-box h2{
+  font-size:22px;
+  margin-bottom:16px;
+}
+.route-box p{
+  font-size:15px;
+  line-height:1.9;
+  opacity:.9;
+}
+
+.line-box{
+  text-align:center;
+}
+.line-box img{
+  width:100%;
+  max-width:520px;
+  border-radius:18px;
+  margin-bottom:22px;
+  box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+footer{
+  background:#000;
+  color:#d0d0d0;
+  text-align:center;
+  padding:38px 20px;
+  font-size:13px;
+}
+
+@media(max-width:768px){
+  section{padding:42px 16px}
+  .hero{min-height:72vh}
+  .hero h1{font-size:28px}
+  .hero p{font-size:14px}
+  .food-card{padding:18px;border-radius:18px}
+  .food-card img{height:240px}
+  .cta-wrap{flex-direction:column}
+  .cta{text-align:center}
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Article",
+  "headline":"新莊美食推薦｜在地人會帶朋友吃的5間店",
+  "description":"整理新莊在地人會帶朋友吃的5間店，包含雪花冰、熱食、宵夜、咖啡店與在地老店。",
+  "image":"https://peiju1011-wq.github.io/taiwan-travel-landing/images/og2.png?v=4",
+  "author":{"@type":"Organization","name":"台灣旅遊攻略"},
+  "publisher":{"@type":"Organization","name":"台灣旅遊攻略"},
+  "mainEntityOfPage":{
+    "@type":"WebPage",
+    "@id":"https://peiju1011-wq.github.io/taiwan-travel-landing/xinzhuang-food-guide.html"
+  },
+  "inLanguage":"zh-TW"
+}
+</script>
+</head>
+
+<body>
+
+<div class="hero">
+  <div>
+    <h1>新莊美食推薦｜<br>在地人會帶朋友吃的5間店</h1>
+    <div class="en">XINZHUANG FOOD GUIDE</div>
+    <p>
+      朋友來新莊，不一定要排很滿。<br>
+      找幾間剛剛好的店，吃完再去新月橋散步，就很像真正的在地生活。
+    </p>
+  </div>
+</div>
+
+<section class="lead">
+  <h2>朋友來新莊，我通常會這樣帶他吃</h2>
+  <p>
+    新莊不是只有捷運經過，也不是只有老街印象。
+    這裡其實有很多適合慢慢吃、慢慢走的小店。
+    這篇整理一條比較自然的<strong>新莊美食推薦</strong>路線，
+    從<strong>雪花冰</strong>、<strong>熱食</strong>、<strong>宵夜</strong>、<strong>咖啡店</strong>，
+    適合朋友聚會，也適合接在新月橋散步前後。
+  </p>
+</section>
+
+<section>
+
+  <article class="food-card">
+    <img src="./images/f3.png" alt="夏雪覓境雪花冰"  style="
+    width:100%;
+    height:550px;
+    object-fit:cover;
+       object-position:center 65%;
+    display:block;
+  "
+>
+
+<p class="img-source" style="
+  text-align:right;
+  font-size:12px;
+
+  margin-top:8px;
+  letter-spacing:.08em;
+">
+  圖片來源：店家官方
+</p>
+
+    <span class="tag">🍧 甜點 / 雪花冰</span>
+    <h2>1｜夏雪覓境：從雪花冰開始的新莊小旅行</h2>
+    <p>
+      如果朋友第一次來新莊，我會把<strong>夏雪覓境</strong>放在很前面。
+      它不是那種很急著打卡的店，而是適合坐下來休息一下，
+      慢慢吃一碗水果雪花冰，再接著去新月橋看夕陽。
+    </p>
+    <p>
+      這裡適合安排在午後，尤其天氣熱的時候，
+      一碗木瓜牛奶雪花冰或芒果雪花冰，會讓整趟行程有一個很舒服的開始。
+    </p>
+    <div class="note">
+      推薦情境：朋友來新莊、夏天約會、吃完接新月橋散步。
+    </div>
+    <div class="cta-wrap">
+        <a class="cta " href="./index.html#day4-food">看新莊一日遊路線 →</a>
+      <a class="cta secondary" href="https://maps.google.com/?q=新莊化成路 夏雪覓境" target="_blank">📍 Google 地圖</a>
+      
+    </div>
+  </article>
+
+<article class="food-card">
+  <img src="./images/ma-1.png" alt="瑪賀牛肉麵 新莊美食推薦"  style="
+    width:100%;
+    height:500px;
+    object-fit:cover;
+    object-position:center 65%;
+    display:block;
+  "
+>
+<p class="img-source" style="
+  text-align:right;
+  font-size:12px;
+  margin-top:8px;
+  letter-spacing:.08em;
+">
+  圖片來源：店家官方
+</p>
+  <span class="tag">🍜 牛肉麵 / 熱食</span>
+
+  <h2>
+    2｜瑪賀牛肉麵：朋友來新莊時，很容易想再回訪的一碗
+  </h2>
+
+  <p>
+    如果朋友想吃一餐比較有飽足感、又帶點在地感的熱食，
+    我通常會帶去吃 <strong>瑪賀牛肉麵</strong>。
+  </p>
+
+  <p>
+    它不是那種很浮誇的打卡店，
+    但湯頭、肉量與整體味道都很穩，
+    屬於吃完會默默記住的那種類型。
+  </p>
+
+  <p>
+    牛肉麵帶一點番茄香氣，
+    搭配熱湯與麵條，
+    很適合安排在下午行程或晚上散步前後。
+  </p>
+
+  <div class="note">
+    推薦情境：朋友聚餐、想吃熱食、下雨天、晚上想吃舒服一點。
+  </div>
+
+  <div class="cta-wrap">
+
+    <a class="cta"
+       href="https://www.mahobeefnoodles.com/"
+       target="_blank"
+       rel="noopener noreferrer">
+       🍜 查看瑪賀牛肉麵
+    </a>
+
+    <a class="cta secondary"
+       href="https://maps.google.com/?q=瑪賀牛肉麵"
+       target="_blank">
+       📍 Google 地圖
+    </a>
+
+  </div>
+</article>
+
+<article class="food-card">
+
+  <img src="./images/ma-2.jpg" alt="新莊宵夜推薦"  
+  style="
+    width:100%;
+    height:600px;
+    object-fit:cover;
+    object-position:center bottom;
+    display:block;
+  "
+>
+
+<p class="img-source" style="
+  text-align:right;
+  font-size:12px;
+  margin-top:8px;
+  letter-spacing:.08em;
+">
+  圖片來源：店家官方
+</p>
+  <span class="tag">🌙 宵夜 / 晚上散步</span>
+
+  <h2>
+    3｜新莊宵夜：晚上才開始熱鬧的小吃感
+  </h2>
+
+  <p>
+    新莊晚上其實很適合慢慢吃點東西。
+    尤其這種日式串燒、炸物、烤肉類的小店，
+    很容易一坐下就聊天聊到很晚。
+  </p>
+
+  <p>
+    像宮城亮串燒這種偏日式風格的宵夜店，
+    串燒種類很多，
+    從日式原味燒鳥串、嚴選板腱牛肉串，
+    到椒麻辛香青花豬、孜然風味雞肉串都有。
+  </p>
+
+  <p>
+    如果想吃重口味一點，
+    涮嘴辣味雞軟骨和北海道正宗羊肉串也很適合晚上配聊天。
+    大家一起分著吃，
+    反而比正式聚餐更有宵夜感。
+  </p>
+
+  <div class="note">
+    📍 地址：242新北市新莊區中隆里中原路86號1樓<br>
+    推薦情境：朋友聚餐、晚上聊天、想吃熱食的時候。
+  </div>
+
+  <div class="cta-wrap">
+
+    <a class="cta"
+       href="https://www.facebook.com/photo/?fbid=122192248226023010&set=pcb.122192249006023010"
+       target="_blank"
+       rel="noopener noreferrer">
+       🌙 查看宮城亮串燒
+    </a>
+
+    <a class="cta secondary"
+       href="https://maps.google.com/?q=242新北市新莊區中原路86號"
+       target="_blank">
+       📍 Google 地圖
+    </a>
+
+  </div>
+
+</article>
+
+<article class="food-card">
+
+  <img src="./images/ma-3.png" alt="Paws cafe 新莊咖啡店推薦">
+  <p class="img-source" style="
+  text-align:right;
+  font-size:12px;
+  margin-top:8px;
+  letter-spacing:.08em;
+">
+  圖片來源：店家官方
+</p>
+
+  <span class="tag">☕ 咖啡 / 寵物友善</span>
+
+  <h2>
+    4｜Paws cafe：適合慢下來聊天的寵物友善咖啡店
+  </h2>
+
+  <p>
+    如果下午不想一直趕行程，
+    我很喜歡在新莊安排一間可以慢慢坐著聊天的咖啡店。
+  </p>
+
+  <p>
+    Paws cafe 是一間寵物友善餐廳，
+    空間舒服、氣氛放鬆，
+    很適合朋友聚會或帶著毛小孩一起來坐坐。
+  </p>
+
+  <p>
+    比起一直跑景點，
+    有時候旅行真正讓人記住的，
+    反而是這種慢慢坐下來聊天的小時光。
+  </p>
+
+  <div class="note">
+    📍 地址：242新北市新莊區頭前里幸福東路132號<br>
+    推薦情境：朋友聊天、下午休息、寵物友善聚餐、下雨天放慢行程。
+  </div>
+
+  <div class="cta-wrap">
+
+    <a class="cta"
+       href="https://shop.ichefpos.com/store/ejvl6MfR/reserve"
+       target="_blank"
+       rel="noopener noreferrer">
+       ☕ 查看 Paws cafe
+    </a>
+
+    <a class="cta secondary"
+       href="https://maps.google.com/?q=242新北市新莊區幸福東路132號"
+       target="_blank">
+       📍 Google 地圖
+    </a>
+
+  </div>
+
+</article>
+
+
+<article class="food-card">
+
+<img 
+  src="./images/ma-5.png" 
+  alt="很秋鍋物 新莊火鍋推薦"
+  style="
+    width:100%;
+    height:510px;
+    object-fit:cover;
+    object-position:center 15%;
+    display:block;
+  "
+>
+<p class="img-source" style="
+  text-align:right;
+  font-size:12px;
+  margin-top:8px;
+  letter-spacing:.08em;
+">
+  圖片來源：店家官方
+</p>
+
+  <span class="tag">🍲 火鍋 / 聚餐</span>
+
+  <h2>
+    5｜很秋鍋物：天氣變涼時，很適合慢慢吃的一餐
+  </h2>
+
+  <p>
+    如果朋友比較喜歡舒服坐著聊天，
+    新莊其實也很適合安排一間火鍋店。
+  </p>
+
+  <p>
+    很秋鍋物的空間氣氛比較放鬆，
+    不會有太重的商業感，
+    很適合朋友聚餐、下雨天，
+    或是晚上想慢慢吃一餐的時候。
+  </p>
+
+  <p>
+    有時候旅行不一定要一直跑景點，
+    反而是這種大家圍著熱鍋聊天的時間，
+    最容易留下記憶點。
+  </p>
+
+  <div class="note">
+    📍 推薦情境：朋友聚餐、雨天備案、晚上想吃熱一點。
+  </div>
+
+  <div class="cta-wrap">
+
+    <a class="cta"
+       href="https://upssmile.com/149928/hencho-hotpot"
+       target="_blank"
+       rel="noopener noreferrer">
+       🍲 查看很秋鍋物
+    </a>
+
+<a class="cta secondary"
+   href="https://maps.google.com/?q=242新北市新莊區中平路192號"
+   target="_blank">
+   📍 Google 地圖
+</a>
+
+  </div>
+
+</article>
+
+
+
+</section>
+
+<section>
+
+  <div class="route-box" style="
+background:
+  linear-gradient(
+    rgba(12, 10, 18, 0.18),
+    rgba(18, 12, 20, 0.28),
+    rgba(10, 8, 14, 0.38)
+  ),
+  url('./images/ma-6.png') center/cover no-repeat;
+   
+
+    box-shadow:0 20px 50px rgba(0,0,0,.22);
+    color:white;
+
+    border-radius:32px;
+    overflow:hidden;
+
+    padding:90px 28px;
+    text-align:center;
+  ">
+
+    <p style="
+      font-size:12px;
+      letter-spacing:.28em;
+      opacity:.75;
+      margin-bottom:14px;
+    ">
+      新莊在地美食推薦
+    </p>
+
+    <h2 style="
+      font-size:38px;
+      line-height:1.35;
+      margin-bottom:28px;
+      text-shadow:0 4px 18px rgba(0,0,0,.22);
+    ">
+      新莊美食推薦<br>
+      在地人真的會帶朋友吃的5間店
+    </h2>
+
+<p style="
+  font-size:17px;
+  line-height:2;
+  max-width:620px;
+  margin:0 auto 18px;
+  color:rgba(255,255,255,.94);
+  text-shadow:0 10px 24px rgba(10, 9, 9, 0.28);
+">
+  從
+  <strong style="color:rgb(255,207,207);">雪花冰</strong>、
+  <strong style="color:rgb(255,207,207);">牛肉麵</strong>，<br>
+  到
+  <strong style="color:rgb(255,207,207);">串燒宵夜</strong>
+  與
+  <strong style="color:rgb(255,207,207);">寵物咖啡廳</strong>，
+</p>
+    <p style="
+      font-size:15px;
+      opacity:.88;
+      margin-bottom:34px;
+    ">
+      慢慢吃、慢慢逛，剛剛好就很好。
+    </p>
+
+    <div class="cta-wrap" style="
+      display:flex;
+      justify-content:center;
+    ">
+
+      <a class="cta"
+         href="./index.html"
+         style="
+           display:inline-block;
+           padding:13px 26px;
+           background:#f08fa7;
+           color:white;
+           border-radius:999px;
+           text-decoration:none;
+           font-size:14px;
+           font-weight:600;
+           box-shadow:0 10px 24px rgba(240,143,167,.28);
+         ">
+         台北一日遊 →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="line-box">
+  <img src="./images/line-cta2.png" alt="加入LINE拿台北隱藏行程">
+
+  <h2>更多台北隱藏路線</h2>
+  <p style="font-size:14px; opacity:.8; line-height:1.8;">
+    我會不定期整理在地人才知道的美食與行程。
+  </p>
+
+  <a href="https://lin.ee/QKOL8w5"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="cta"
+     style="background:#06C755; box-shadow:0 10px 25px rgba(6,199,85,.35);">
+    🟢 加入LINE拿台北隱藏行程 →
+  </a>
+
+  <p style="font-size:12px; opacity:.6; margin-top:10px;">
+    📱 建議用手機點擊，會直接開啟LINE加入好友
+  </p>
+</section>
+
+<footer>
+  <p style="letter-spacing:.2em;">TAIWAN TRAVEL GUIDE</p>
+  <p style="margin-top:10px; opacity:.6;">📍新莊美食整理 × 在地生活提案</p>
+  <p style="margin-top:16px; font-size:12px; opacity:.4;">© 2026 All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
