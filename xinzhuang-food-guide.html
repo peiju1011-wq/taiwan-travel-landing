@@ -196,6 +196,46 @@ footer{
   .cta-wrap{flex-direction:column}
   .cta{text-align:center}
 }
+
+
+.food-main-img{
+  width:100%;
+
+}
+
+/* 手機版 */
+@media (max-width:768px){
+
+  .food-main-img{
+    height:auto;
+    object-fit:contain;
+    object-position:center;
+  }
+
+}
+
+
+.food-img-right{
+  width:100%;
+  height:510px;
+
+  object-fit:cover;
+  object-position:78% 15%;
+
+  display:block;
+}
+
+/* 手機版 */
+@media(max-width:768px){
+
+  .food-img-right{
+    height:auto;
+
+    object-fit:contain;
+    object-position:center;
+  }
+
+}
 </style>
 
 <script type="application/ld+json">
@@ -243,12 +283,15 @@ footer{
 <section>
 
   <article class="food-card">
-    <img src="./images/ma-10.png" alt="夏雪覓境雪花冰"  style="
+<img 
+  src="./images/ma-10.png" 
+  alt="夏雪覓境雪花冰"
+
+  style="
     width:100%;
-    height:380px;
-    object-fit:cover;
-       object-position:30% 65%;
+    height:auto;
     display:block;
+    border-radius:24px;
   "
 >
 
@@ -500,12 +543,12 @@ footer{
 <img 
   src="./images/ma-5.png" 
   alt="很秋鍋物 新莊火鍋推薦"
+
   style="
     width:100%;
-    height:510px;
-    object-fit:cover;
-    object-position:center 15%;
+    height:auto;
     display:block;
+    border-radius:24px;
   "
 >
 <p class="img-source" style="
