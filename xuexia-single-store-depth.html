@@ -324,48 +324,68 @@ content="https://peiju1011-wq.github.io/taiwan-travel-landing/images/xuexia-og.p
     opacity:1;
   }
 }
-
 /* ===== 左右切換按鈕 ===== */
 
 .nav{
-  position:absolute;
-  top:50%;
+  position:fixed;
+
+  top:72%;
   transform:translateY(-50%);
+
   width:58px;
   height:58px;
+
   border:none;
   border-radius:999px;
-  background:rgba(255,255,255,.12);
+
+  background:rgba(255,255,255,.16);
+
   color:white;
-  font-size:42px;
+  font-size:38px;
+  line-height:1;
+
   cursor:pointer;
+
   transition:.25s;
-  backdrop-filter:blur(6px);
-  z-index:20;
+
+  backdrop-filter:blur(8px);
+
+  z-index:99999;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.nav:hover{
+  background:rgba(255,255,255,.26);
+  transform:translateY(-50%) scale(1.05);
 }
 
-.nav:hover{
-  background:rgba(255,255,255,.22);
-}
+/* ===== 桌機版位置 ===== */
 
 .prev{
-  left:28px;
+  left:40px;
 }
 
 .next{
-  right:28px;
+  right:40px;
 }
 
 /* ===== 關閉按鈕 ===== */
 
 .close-btn{
-  position:absolute;
+  position:fixed;
+
   top:24px;
   right:30px;
+
   color:white;
   font-size:36px;
+
   cursor:pointer;
-  z-index:30;
+
+  z-index:100000;
+
   transition:.25s;
 }
 
@@ -382,11 +402,18 @@ content="https://peiju1011-wq.github.io/taiwan-travel-landing/images/xuexia-og.p
     grid-template-columns:1fr;
   }
 
+
+
   .nav{
+    top:72%;
+
     width:48px;
     height:48px;
+
     font-size:34px;
   }
+
+
 
   .prev{
     left:12px;
