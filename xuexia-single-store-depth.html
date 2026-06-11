@@ -449,14 +449,63 @@ content="https://peiju1011-wq.github.io/taiwan-travel-landing/images/xuexia-og2.
   text-shadow:0 2px 10px rgba(0,0,0,.3);
 }
 
+.hero-header{
+  position:relative;
+  overflow:hidden;
+
+  padding:120px 0 90px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,.35),
+      rgba(0,0,0,.52)
+    ),
+    url('./images/xuexia-og2.png') center/cover;
+
+  color:white;
+}
+
+.hero-header::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(255,190,120,.22),
+      transparent 34%
+    );
+
+  pointer-events:none;
+}
+
+.hero-header .tag{
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.2);
+  color:white;
+  backdrop-filter:blur(6px);
+}
+
+.hero-header h1{
+  color:white;
+  text-shadow:0 6px 24px rgba(0,0,0,.35);
+}
+
+.hero-header .lead{
+  color:rgba(255,255,255,.88);
+  text-shadow:0 2px 12px rgba(0,0,0,.25);
+}
+
   </style>
 </head>
 <body>
-  <header>
+ <header >
 
 
-    <div class="wrap">
-      <span class="tag">新莊化成路單店深度介紹</span>
+    <div class="wrap ">
+      <span class="tag ">新莊化成路單店深度介紹</span>
       <h1>夏雪覓境：從現打果汁雪花冰到熱食便當的新莊小店</h1>
       <p class="lead">
         位在新北市新莊區化成路186號的夏雪覓境，不只是一間甜品店。這裡有雪花冰🍧、豆花，也有螺螄粉🍜、肉夾饃、罐罐米線鍋與多款便當🍱，適合想吃點清爽甜品，和吃飽餐的人。
@@ -498,7 +547,7 @@ content="https://peiju1011-wq.github.io/taiwan-travel-landing/images/xuexia-og2.
   <div class="hero-box">
 
     <img
-      src="./images/bento-dm.jpg"
+      src="./images/bento-dm2.jpg"
       alt="夏雪覓境便當DM"
       onclick="openLightbox(2)"
     >
@@ -550,7 +599,7 @@ content="https://peiju1011-wq.github.io/taiwan-travel-landing/images/xuexia-og2.
         </section>
 
         <section class="card">
-          <h2>不只品：豆花、飲品與現打果汁也能輕鬆搭配</h2>
+          <h2>不只冰品：豆花、飲品與現打果汁也能輕鬆搭配</h2>
           <p>
             除了雪花冰，店內也有豆花。豆花的優點是負擔感比較低，適合想吃甜但不想太厚重的時候。若同行的人不想吃冰，也可以改選豆花或飲品，甜品選擇多樣。
           </p>
@@ -614,7 +663,7 @@ content="https://peiju1011-wq.github.io/taiwan-travel-landing/images/xuexia-og2.
 
   <div class="hero-box">
     <img
-      src="./images/bento-dm.jpg"
+      src="./images/bento-dm2.jpg"
       alt="夏雪覓境便當DM"
       onclick="openLightbox(2)"
     >
@@ -624,29 +673,25 @@ content="https://peiju1011-wq.github.io/taiwan-travel-landing/images/xuexia-og2.
 
   <p>
     🍱最近推出的新便當系列，
-    包含炙燒嫩肉、舒肥肉、黃燜雞與農家小炒等口味，
+    包含炙燒嫩肉、舒肥餐、黃燜雞與農家小炒等口味，
     很適合附近上班族午餐或晚餐外帶。
   </p>
 
   <div class="menu-grid">
     <div class="menu-item">
       <strong>炙燒嫩肉便當</strong><br>
-      長時間嫩肉燉煮、入味軟爛，適合喜歡控肉瘦肉的客群，好吃健康沒負擔。
+      精選大塊梅花肉，煎至金黃香酥，悶煮入味搭配香Ｑ白飯與清爽時蔬，就是最讓人滿足的家常味。
     </div>
 
-    <div class="menu-item">
-      <strong>舒肥肉便當</strong><br>
-      豬肉口感細緻，整體清爽，有照燒、泰式酸辣、和風、胡麻、油蔥醬，5樣可選。
-    </div>
 
     <div class="menu-item">
       <strong>黃燜雞便當</strong><br>
-      下飯系熱食代表，健康帶骨雞肉+大香菇等現切配料燉煮，人氣NO.1。
+      嚴選豬肉搭配祕滷醬汁與馬鈴薯慢火燉煮，醬香開胃，每一口都超下飯！
     </div>
 
     <div class="menu-item">
       <strong>農家小炒便當</strong><br>
-      帶有家常熱炒感與鍋氣香味，小米椒搭配炒豬肉切，療癒餐首選。
+      嚴選豬肉與糯米椒拌炒，椒香四溢農家的天然美味，讓你一口接一口，欲罷不能，停不下來～
     </div>
   </div>
 </section>
@@ -714,7 +759,7 @@ FAQ｜夏雪覓境常見問題
           </div>
           <div class="info-row">
             <strong>🍱便當選擇</strong>
-            炙燒嫩肉、黃燜雞、農家小炒、舒肥肉便當
+            炙燒嫩肉、黃燜雞、農家小炒、舒肥餐
           </div>
           <a class="cta" href="https://www.google.com/maps/search/?api=1&query=新北市新莊區化成路186號 夏雪覓境" target="_blank" rel="noopener">📍&nbsp;查看地圖</a>
           <p class="note">實際營業時間、菜單與價格，建議以店家現場或 Google 商家資訊為準。</p>
@@ -872,7 +917,7 @@ FAQ｜夏雪覓境常見問題
 const images = [
   "./images/menu1.jpg",
   "./images/menu2.jpg",
-  "./images/bento-dm.jpg"
+  "./images/bento-dm2.jpg"
 ];
 
 let currentIndex = 0;
